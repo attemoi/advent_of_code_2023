@@ -1,0 +1,13 @@
+package:
+  name: advent-of-code-2023
+  dependencies:
+    - console
+    - effect
+    - prelude
+  test:
+    main: Test.Main
+    dependencies: []
+workspace:
+  package_set:
+    registry: 47.5.1
+  extra_packages: {}
