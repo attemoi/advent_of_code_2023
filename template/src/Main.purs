@@ -7,4 +7,4 @@ import Effect.Console (log)
 
 main :: Effect Unit
 main = do
-  log "🍝"
+  log "This is a template to create new projects for each day!"

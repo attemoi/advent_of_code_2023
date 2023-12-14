@@ -1,7 +1,7 @@
 workspace:
   packages:
-    advent-of-code-2023:
-      path: ./
+    template:
+      path: template
       needed_by: []
       dependencies:
         - console
@@ -475,7 +475,7 @@ workspace:
 packages:
   console:
     needed_by:
-      - advent-of-code-2023
+      - template
     package:
       type: registry
       version: 6.1.0
@@ -485,7 +485,7 @@ packages:
         - prelude
   effect:
     needed_by:
-      - advent-of-code-2023
+      - template
     package:
       type: registry
       version: 4.0.0
@@ -494,7 +494,7 @@ packages:
         - prelude
   prelude:
     needed_by:
-      - advent-of-code-2023
+      - template
     package:
       type: registry
       version: 6.0.1
