@@ -1,0 +1,15 @@
+package:
+  name: 01-trebuchet
+  dependencies:
+    - aff
+    - console
+    - effect
+    - prelude
+    - strings
+    - lists
+    - unicode
+    - node-fs
+    - parsing
+  test:
+    main: Test.Main
+    dependencies: []
