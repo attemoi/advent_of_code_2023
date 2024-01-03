@@ -20,6 +20,7 @@ workspace:
         - console
         - effect
         - prelude
+        - utils
       test_dependencies: []
     template:
       path: template
@@ -28,10 +29,13 @@ workspace:
         - console
         - effect
         - prelude
+        - utils
       test_dependencies: []
     utils:
       path: utils
       needed_by:
+        - template
+        - 02-cube-conundrum
         - 01-trebuchet
       dependencies:
         - console
@@ -508,6 +512,8 @@ packages:
   aff:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -534,6 +540,8 @@ packages:
   arraybuffer-types:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -543,6 +551,8 @@ packages:
   arrays:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -566,6 +576,8 @@ packages:
   bifunctors:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -593,6 +605,8 @@ packages:
   const:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -605,6 +619,8 @@ packages:
   contravariant:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -619,6 +635,8 @@ packages:
   control:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -630,6 +648,8 @@ packages:
   datetime:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -655,6 +675,8 @@ packages:
   distributive:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -681,6 +703,8 @@ packages:
   either:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -694,6 +718,8 @@ packages:
   enums:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -713,6 +739,8 @@ packages:
   exceptions:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -726,6 +754,8 @@ packages:
   exists:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -736,6 +766,8 @@ packages:
   foldable-traversable:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -756,6 +788,8 @@ packages:
   foreign:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -774,6 +808,8 @@ packages:
   functions:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -784,6 +820,8 @@ packages:
   functors:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -806,6 +844,8 @@ packages:
   gen:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -825,6 +865,8 @@ packages:
   identity:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -838,6 +880,8 @@ packages:
   integers:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -850,6 +894,8 @@ packages:
   invariant:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -861,6 +907,8 @@ packages:
   js-date:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -876,6 +924,8 @@ packages:
   lazy:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -889,6 +939,8 @@ packages:
   lists:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -910,6 +962,8 @@ packages:
   maybe:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -923,6 +977,8 @@ packages:
   newtype:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -934,6 +990,8 @@ packages:
   node-buffer:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -949,6 +1007,8 @@ packages:
   node-event-emitter:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -965,6 +1025,8 @@ packages:
   node-fs:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -991,6 +1053,8 @@ packages:
   node-path:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1001,6 +1065,8 @@ packages:
   node-streams:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1018,6 +1084,8 @@ packages:
   nonempty:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1033,6 +1101,8 @@ packages:
   now:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1044,6 +1114,8 @@ packages:
   nullable:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1056,6 +1128,8 @@ packages:
   numbers:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1067,6 +1141,8 @@ packages:
   ordered-collections:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1087,6 +1163,8 @@ packages:
   orders:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1098,6 +1176,8 @@ packages:
   parallel:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1151,6 +1231,8 @@ packages:
   partial:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1171,6 +1253,8 @@ packages:
   profunctor:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1188,6 +1272,8 @@ packages:
   refs:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1199,6 +1285,8 @@ packages:
   safe-coerce:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1209,6 +1297,8 @@ packages:
   st:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1222,6 +1312,8 @@ packages:
   strings:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1247,6 +1339,8 @@ packages:
   tailrec:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1264,6 +1358,8 @@ packages:
   transformers:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1287,6 +1383,8 @@ packages:
   tuples:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1299,6 +1397,8 @@ packages:
   type-equality:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1308,6 +1408,8 @@ packages:
   unfoldable:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1322,6 +1424,8 @@ packages:
   unicode:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1334,6 +1438,8 @@ packages:
   unsafe-coerce:
     needed_by:
       - utils
+      - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry

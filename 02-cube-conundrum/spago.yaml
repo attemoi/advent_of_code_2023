@@ -1,5 +1,5 @@
 package:
-  name: template
+  name: 02-cube-conundrum
   dependencies:
     - console
     - effect
