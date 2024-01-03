@@ -5,6 +5,7 @@ package:
     - effect
     - prelude
     - utils
+    - parsing
   test:
     main: Test.Main
     dependencies: []
