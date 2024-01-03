@@ -8,22 +8,19 @@ import Data.Foldable (sum)
 import Data.Int (fromString)
 import Data.List (List(..), head, last, (:))
 import Data.Maybe (Maybe)
-import Data.String (Pattern(..), drop, split)
+import Data.String (drop)
 import Data.String.CodeUnits (fromCharArray)
 import Effect (Effect)
 import Effect.Console (log)
-import Node.Encoding (Encoding(..))
-import Node.FS.Sync (readTextFile)
 import Parsing (Parser, runParser)
 import Parsing.Combinators ((<|>))
 import Parsing.String (string)
 import Parsing.String.Basic (digit)
+import Utils (readLines)
 
 main :: Effect Unit
 main = do
-  let filePath = "01-trebuchet/input.txt"
-  input <- readTextFile UTF8 filePath
-  let lines = split (Pattern "\n") input
+  lines <- readLines "01-trebuchet/input.txt"
   log $ show $ "part1: " <> 
     (show $ sum $ mapMaybe (calibrationValue digit) lines)
   log $ show $ "part2: " <> 

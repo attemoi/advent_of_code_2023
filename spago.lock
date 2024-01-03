@@ -8,11 +8,18 @@ workspace:
         - console
         - effect
         - lists
-        - node-fs
         - parsing
         - prelude
         - strings
-        - unicode
+        - utils
+      test_dependencies: []
+    02-cube-conundrum:
+      path: 02-cube-conundrum
+      needed_by: []
+      dependencies:
+        - console
+        - effect
+        - prelude
       test_dependencies: []
     template:
       path: template
@@ -21,6 +28,17 @@ workspace:
         - console
         - effect
         - prelude
+      test_dependencies: []
+    utils:
+      path: utils
+      needed_by:
+        - 01-trebuchet
+      dependencies:
+        - console
+        - effect
+        - node-fs
+        - prelude
+        - unicode
       test_dependencies: []
   package_set:
     address:
@@ -489,6 +507,7 @@ workspace:
 packages:
   aff:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -514,6 +533,7 @@ packages:
         - unsafe-coerce
   arraybuffer-types:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -522,6 +542,7 @@ packages:
       dependencies: []
   arrays:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -544,6 +565,7 @@ packages:
         - unsafe-coerce
   bifunctors:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -557,7 +579,9 @@ packages:
         - tuples
   console:
     needed_by:
+      - utils
       - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -568,6 +592,7 @@ packages:
         - prelude
   const:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -579,6 +604,7 @@ packages:
         - prelude
   contravariant:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -592,6 +618,7 @@ packages:
         - tuples
   control:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -602,6 +629,7 @@ packages:
         - prelude
   datetime:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -626,6 +654,7 @@ packages:
         - tuples
   distributive:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -639,7 +668,9 @@ packages:
         - type-equality
   effect:
     needed_by:
+      - utils
       - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -649,6 +680,7 @@ packages:
         - prelude
   either:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -661,6 +693,7 @@ packages:
         - prelude
   enums:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -679,6 +712,7 @@ packages:
         - unfoldable
   exceptions:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -691,6 +725,7 @@ packages:
         - prelude
   exists:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -700,6 +735,7 @@ packages:
         - unsafe-coerce
   foldable-traversable:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -719,6 +755,7 @@ packages:
         - tuples
   foreign:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -736,6 +773,7 @@ packages:
         - transformers
   functions:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -745,6 +783,7 @@ packages:
         - prelude
   functors:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -766,6 +805,7 @@ packages:
         - unsafe-coerce
   gen:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -784,6 +824,7 @@ packages:
         - unfoldable
   identity:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -796,6 +837,7 @@ packages:
         - prelude
   integers:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -807,6 +849,7 @@ packages:
         - prelude
   invariant:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -817,6 +860,7 @@ packages:
         - prelude
   js-date:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -831,6 +875,7 @@ packages:
         - now
   lazy:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -843,6 +888,7 @@ packages:
         - prelude
   lists:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -863,6 +909,7 @@ packages:
         - unfoldable
   maybe:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -875,6 +922,7 @@ packages:
         - prelude
   newtype:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -885,6 +933,7 @@ packages:
         - safe-coerce
   node-buffer:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -899,6 +948,7 @@ packages:
         - unsafe-coerce
   node-event-emitter:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -914,6 +964,7 @@ packages:
         - unsafe-coerce
   node-fs:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -939,6 +990,7 @@ packages:
         - unsafe-coerce
   node-path:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -948,6 +1000,7 @@ packages:
         - effect
   node-streams:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -964,6 +1017,7 @@ packages:
         - prelude
   nonempty:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -978,6 +1032,7 @@ packages:
         - unfoldable
   now:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -988,6 +1043,7 @@ packages:
         - effect
   nullable:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -999,6 +1055,7 @@ packages:
         - maybe
   numbers:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1009,6 +1066,7 @@ packages:
         - maybe
   ordered-collections:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1028,6 +1086,7 @@ packages:
         - unfoldable
   orders:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1038,6 +1097,7 @@ packages:
         - prelude
   parallel:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1090,6 +1150,7 @@ packages:
         - unsafe-coerce
   partial:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1098,7 +1159,9 @@ packages:
       dependencies: []
   prelude:
     needed_by:
+      - utils
       - template
+      - 02-cube-conundrum
       - 01-trebuchet
     package:
       type: registry
@@ -1107,6 +1170,7 @@ packages:
       dependencies: []
   profunctor:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1123,6 +1187,7 @@ packages:
         - tuples
   refs:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1133,6 +1198,7 @@ packages:
         - prelude
   safe-coerce:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1142,6 +1208,7 @@ packages:
         - unsafe-coerce
   st:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1154,6 +1221,7 @@ packages:
         - unsafe-coerce
   strings:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1178,6 +1246,7 @@ packages:
         - unsafe-coerce
   tailrec:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1194,6 +1263,7 @@ packages:
         - refs
   transformers:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1216,6 +1286,7 @@ packages:
         - unfoldable
   tuples:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1227,6 +1298,7 @@ packages:
         - prelude
   type-equality:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1235,6 +1307,7 @@ packages:
       dependencies: []
   unfoldable:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1248,6 +1321,7 @@ packages:
         - tuples
   unicode:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry
@@ -1259,6 +1333,7 @@ packages:
         - strings
   unsafe-coerce:
     needed_by:
+      - utils
       - 01-trebuchet
     package:
       type: registry

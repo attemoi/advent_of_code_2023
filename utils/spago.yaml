@@ -1,0 +1,8 @@
+package:
+  name: utils
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - unicode
+    - node-fs
