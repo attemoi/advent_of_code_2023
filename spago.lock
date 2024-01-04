@@ -23,6 +23,16 @@ workspace:
         - prelude
         - utils
       test_dependencies: []
+    03-gear-ratios:
+      path: 03-gear-ratios
+      needed_by: []
+      dependencies:
+        - console
+        - effect
+        - matrices
+        - prelude
+        - utils
+      test_dependencies: []
     template:
       path: template
       needed_by: []
@@ -36,6 +46,7 @@ workspace:
       path: utils
       needed_by:
         - template
+        - 03-gear-ratios
         - 02-cube-conundrum
         - 01-trebuchet
       dependencies:
@@ -514,6 +525,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -542,6 +554,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -553,6 +566,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -578,6 +592,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -594,6 +609,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -607,6 +623,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -621,6 +638,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -637,6 +655,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -650,6 +669,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -677,6 +697,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -693,6 +714,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -705,6 +727,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -720,6 +743,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -741,6 +765,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -756,6 +781,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -768,6 +794,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -790,6 +817,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -810,6 +838,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -822,6 +851,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -846,6 +876,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -867,6 +898,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -882,6 +914,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -896,6 +929,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -909,6 +943,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -926,6 +961,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -941,6 +977,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -960,10 +997,21 @@ packages:
         - tailrec
         - tuples
         - unfoldable
+  matrices:
+    needed_by:
+      - 03-gear-ratios
+    package:
+      type: registry
+      version: 5.0.1
+      integrity: sha256-FnDEHKtgTlDijXjXW7R7w3gkLvdh0VV/agiokU4uuf8=
+      dependencies:
+        - arrays
+        - strings
   maybe:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -979,6 +1027,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -992,6 +1041,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1009,6 +1059,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1027,6 +1078,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1055,6 +1107,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1067,6 +1120,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1086,6 +1140,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1103,6 +1158,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1116,6 +1172,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1130,6 +1187,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1143,6 +1201,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1165,6 +1224,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1178,6 +1238,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1234,6 +1295,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1245,6 +1307,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1256,6 +1319,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1275,6 +1339,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1288,6 +1353,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1300,6 +1366,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1315,6 +1382,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1342,6 +1410,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1361,6 +1430,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1386,6 +1456,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1400,6 +1471,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1411,6 +1483,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1427,6 +1500,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:
@@ -1441,6 +1515,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
     package:

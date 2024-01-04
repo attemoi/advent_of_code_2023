@@ -1,5 +1,6 @@
 module Utils
-  ( readLines
+  ( readFile
+  , readLines
   )
   where
 
@@ -9,6 +10,9 @@ import Data.String (Pattern(..), split)
 import Effect (Effect)
 import Node.Encoding (Encoding(..))
 import Node.FS.Sync (readTextFile)
+
+readFile :: String -> Effect String
+readFile filePath = readTextFile UTF8 filePath
 
 readLines :: String -> Effect (Array String)
 readLines filePath = do 

@@ -1,0 +1,11 @@
+package:
+  name: 03-gear-ratios
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - utils
+    - matrices
+  test:
+    main: Test.Main
+    dependencies: []
