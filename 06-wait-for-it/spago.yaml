@@ -1,0 +1,11 @@
+package:
+  name: 06-wait-for-it
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - utils
+    - bigints
+  test:
+    main: Test.Main
+    dependencies: []

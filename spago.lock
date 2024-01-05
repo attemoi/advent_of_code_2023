@@ -42,6 +42,16 @@ workspace:
         - prelude
         - utils
       test_dependencies: []
+    06-wait-for-it:
+      path: 06-wait-for-it
+      needed_by: []
+      dependencies:
+        - bigints
+        - console
+        - effect
+        - prelude
+        - utils
+      test_dependencies: []
     template:
       path: template
       needed_by: []
@@ -55,6 +65,7 @@ workspace:
       path: utils
       needed_by:
         - template
+        - 06-wait-for-it
         - 04-scratchcards
         - 03-gear-ratios
         - 02-cube-conundrum
@@ -535,6 +546,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -565,6 +577,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -578,6 +591,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -601,10 +615,22 @@ packages:
         - tuples
         - unfoldable
         - unsafe-coerce
+  assert:
+    needed_by:
+      - 06-wait-for-it
+    package:
+      type: registry
+      version: 6.0.0
+      integrity: sha256-hCSYcCw9kj3qujoDcriWhCdmrpPZoguSPDZhEMnTl3A=
+      dependencies:
+        - console
+        - effect
+        - prelude
   bifunctors:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -619,10 +645,32 @@ packages:
         - newtype
         - prelude
         - tuples
+  bigints:
+    needed_by:
+      - 06-wait-for-it
+    package:
+      type: registry
+      version: 7.0.1
+      integrity: sha256-M59p1lxLbLwLKAx8XMzrHrpExospxdsF9O1eovr0uRg=
+      dependencies:
+        - arrays
+        - assert
+        - console
+        - effect
+        - foldable-traversable
+        - integers
+        - maybe
+        - numbers
+        - partial
+        - prelude
+        - quickcheck
+        - quickcheck-laws
+        - strings
   console:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -638,6 +686,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -654,6 +703,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -672,6 +722,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -687,6 +738,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -716,6 +768,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -734,6 +787,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -748,6 +802,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -765,6 +820,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -788,6 +844,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -805,6 +862,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -819,6 +877,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -843,6 +902,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -865,6 +925,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -879,6 +940,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -905,6 +967,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -928,6 +991,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -945,6 +1009,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -961,6 +1026,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -976,6 +1042,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -995,6 +1062,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1008,10 +1076,25 @@ packages:
         - foldable-traversable
         - invariant
         - prelude
+  lcg:
+    needed_by:
+      - 06-wait-for-it
+    package:
+      type: registry
+      version: 4.0.0
+      integrity: sha256-h7ME5cthLfbgJOJdsZcSfFpwXsx4rf8YmhebU+3iSYg=
+      dependencies:
+        - effect
+        - integers
+        - maybe
+        - partial
+        - prelude
+        - random
   lists:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1047,6 +1130,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1064,6 +1148,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1079,6 +1164,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1098,6 +1184,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1118,6 +1205,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1148,6 +1236,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1162,6 +1251,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1183,6 +1273,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1202,6 +1293,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1217,6 +1309,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1233,6 +1326,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1248,6 +1342,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1272,6 +1367,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1287,6 +1383,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1345,6 +1442,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1358,6 +1456,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1371,6 +1470,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1388,10 +1488,77 @@ packages:
         - newtype
         - prelude
         - tuples
+  quickcheck:
+    needed_by:
+      - 06-wait-for-it
+    package:
+      type: registry
+      version: 8.0.1
+      integrity: sha256-ZvpccKQCvgslTXZCNmpYW4bUsFzhZd/kQUr2WmxFTGY=
+      dependencies:
+        - arrays
+        - console
+        - control
+        - effect
+        - either
+        - enums
+        - exceptions
+        - foldable-traversable
+        - gen
+        - identity
+        - integers
+        - lazy
+        - lcg
+        - lists
+        - maybe
+        - newtype
+        - nonempty
+        - numbers
+        - partial
+        - prelude
+        - record
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - unfoldable
+  quickcheck-laws:
+    needed_by:
+      - 06-wait-for-it
+    package:
+      type: registry
+      version: 7.0.0
+      integrity: sha256-rnzVTiDnymzYkvnhI8EvPwrmO8LgcTnrMTuiI172Tkc=
+      dependencies:
+        - enums
+        - quickcheck
+  random:
+    needed_by:
+      - 06-wait-for-it
+    package:
+      type: registry
+      version: 6.0.0
+      integrity: sha256-CJ611a35MPCE7XQMp0rdC6MCn76znlhisiCRgboAG+Q=
+      dependencies:
+        - effect
+        - integers
+  record:
+    needed_by:
+      - 06-wait-for-it
+    package:
+      type: registry
+      version: 4.0.0
+      integrity: sha256-Za5U85bTRJEfGK5Sk4hM41oXy84YQI0I8TL3WUn1Qzg=
+      dependencies:
+        - functions
+        - prelude
+        - unsafe-coerce
   refs:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1407,6 +1574,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1421,6 +1589,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1438,6 +1607,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1467,6 +1637,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1488,6 +1659,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1515,6 +1687,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1531,6 +1704,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1544,6 +1718,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1562,6 +1737,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
@@ -1578,6 +1754,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
