@@ -33,6 +33,15 @@ workspace:
         - prelude
         - utils
       test_dependencies: []
+    04-scratchcards:
+      path: 04-scratchcards
+      needed_by: []
+      dependencies:
+        - console
+        - effect
+        - prelude
+        - utils
+      test_dependencies: []
     template:
       path: template
       needed_by: []
@@ -46,6 +55,7 @@ workspace:
       path: utils
       needed_by:
         - template
+        - 04-scratchcards
         - 03-gear-ratios
         - 02-cube-conundrum
         - 01-trebuchet
@@ -525,6 +535,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -554,6 +565,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -566,6 +578,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -592,6 +605,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -609,6 +623,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -623,6 +638,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -638,6 +654,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -655,6 +672,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -669,6 +687,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -697,6 +716,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -714,6 +734,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -727,6 +748,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -743,6 +765,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -765,6 +788,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -781,6 +805,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -794,6 +819,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -817,6 +843,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -838,6 +865,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -851,6 +879,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -876,6 +905,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -898,6 +928,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -914,6 +945,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -929,6 +961,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -943,6 +976,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -961,6 +995,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -977,6 +1012,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1011,6 +1047,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1027,6 +1064,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1041,6 +1079,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1059,6 +1098,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1078,6 +1118,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1107,6 +1148,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1120,6 +1162,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1140,6 +1183,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1158,6 +1202,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1172,6 +1217,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1187,6 +1233,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1201,6 +1248,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1224,6 +1272,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1238,6 +1287,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1295,6 +1345,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1307,6 +1358,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1319,6 +1371,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1339,6 +1392,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1353,6 +1407,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1366,6 +1421,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1382,6 +1438,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1410,6 +1467,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1430,6 +1488,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1456,6 +1515,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1471,6 +1531,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1483,6 +1544,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1500,6 +1562,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet
@@ -1515,6 +1578,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 04-scratchcards
       - 03-gear-ratios
       - 02-cube-conundrum
       - 01-trebuchet

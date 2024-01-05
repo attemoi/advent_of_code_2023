@@ -1,0 +1,10 @@
+package:
+  name: 04-scratchcards
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - utils
+  test:
+    main: Test.Main
+    dependencies: []
