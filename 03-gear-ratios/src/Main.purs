@@ -1,18 +1,25 @@
 module Main where
 
 import Prelude
-
-import Data.Array (uncons)
+import Data.Array.NonEmpty (toArray)
 import Data.CodePoint.Unicode (isDecDigit)
+import Data.Either (hush)
 import Data.Foldable (sum)
 import Data.Int (fromString)
-import Data.List (List(..), any, filter, mapMaybe, (:))
+import Data.List (List(..), any, catMaybes, filter, mapMaybe, (:))
 import Data.List as List
+import Data.List.NonEmpty (toList)
 import Data.Maybe (Maybe(..), fromMaybe)
-import Data.String (CodePoint, codePointFromChar, drop, dropWhile, length, takeWhile)
+import Data.String (CodePoint, codePointFromChar, length, singleton)
+import Data.String.CodeUnits (fromCharArray)
 import Effect (Effect)
 import Effect.Console (log)
-import Utils (readLines)
+import Parsing (Parser, Position(..), position)
+import Parsing.Combinators.Array (many1)
+import Parsing.String (satisfyCodePoint)
+import Parsing.String.Basic (digit)
+import Parsing.String.Replace (splitCap)
+import Utils (readFile)
 
 type EnginePart
   = { col :: Int, row :: Int, num :: Int, length :: Int }
@@ -20,91 +27,68 @@ type EnginePart
 type EngineSymbol
   = { col :: Int, row :: Int, symbol :: String }
 
-type EngineSchematics
-  = { parts :: List EnginePart, symbols :: List EngineSymbol }
-
-type Gear
-  = { a :: EnginePart, b :: EnginePart }
-
 main :: Effect Unit
 main = do
-  lines <- readLines "03-gear-ratios/input.txt"
+  input <- readFile "03-gear-ratios/input.txt"
   let
-    engine = parseSchematics lines
+    partNumbers = catMaybes $ toList $ hush <$> splitCap input enginePartParser
+
+    symbols = catMaybes $ toList $ hush <$> splitCap input symbolParser
   log $ show $ "Part1, sum of part nums: "
-    <> (show $ sum $ map _.num $ filter (\part -> isAdjacentToAnySymbol part engine.symbols) engine.parts)
+    <> (show $ sum $ map _.num $ filter (\part -> isAdjacentToAnySymbol part symbols) partNumbers)
   log $ show $ "Part2, sum of gear ratios: "
-    <> (show $ sum $ mapMaybe (getGearRatio engine.parts) engine.symbols)
+    <> (show $ sum $ mapMaybe (getGearRatio partNumbers) symbols)
 
-combineSchematics :: EngineSchematics -> EngineSchematics -> EngineSchematics
-combineSchematics a b = { parts: a.parts <> b.parts, symbols: a.symbols <> b.symbols }
+enginePartParser :: Parser String EnginePart
+enginePartParser = do
+  pos <- position
+  partNo <- many1Digit
+  pure { col: column pos, row: row pos, num: partNo, length: length $ show $ partNo }
 
-emptySchematics :: EngineSchematics
-emptySchematics = { parts: Nil, symbols: Nil }
+many1Digit :: Parser String Int
+many1Digit = do
+  digits <- many1 digit
+  pure $ fromMaybe 0 (fromString $ fromCharArray (toArray digits))
+
+symbolParser :: Parser String EngineSymbol
+symbolParser = do
+  pos <- position
+  cp <- satisfyCodePoint isSymbol
+  pure { col: column pos, row: row pos, symbol: singleton cp }
+
+column :: Position -> Int
+column (Position a) = _.column a
+
+row :: Position -> Int
+row (Position a) = _.line a
 
 isAdjacentToAnySymbol :: EnginePart -> List EngineSymbol -> Boolean
-isAdjacentToAnySymbol part symbols = any (isNextToSymbol part) symbols
+isAdjacentToAnySymbol part symbols = any (isAdjacentToSymbol part) symbols
 
 findAdjacentParts :: EngineSymbol -> List EnginePart -> List EnginePart
-findAdjacentParts symbol parts = filter (\part -> isNextToSymbol part symbol) parts
+findAdjacentParts symbol parts = filter (\part -> isAdjacentToSymbol part symbol) parts
 
 getGearRatio :: List EnginePart -> EngineSymbol -> Maybe Int
 getGearRatio parts symbol
   | symbol.symbol == "*" = case findAdjacentParts symbol parts of
     (a : b : Nil) -> Just (a.num * b.num)
     _ -> Nothing
+
 getGearRatio _ _ = Nothing
 
 isAdjacentToExactlyTwoParts :: EngineSymbol -> List EnginePart -> Boolean
-isAdjacentToExactlyTwoParts symbol parts = 2 == List.length (filter (\part -> isNextToSymbol part symbol) parts)
+isAdjacentToExactlyTwoParts symbol parts = 2 == List.length (filter (\part -> isAdjacentToSymbol part symbol) parts)
 
-isNextToSymbol :: EnginePart -> EngineSymbol -> Boolean
-isNextToSymbol part symbol =
+isAdjacentToSymbol :: EnginePart -> EngineSymbol -> Boolean
+isAdjacentToSymbol part symbol =
   (symbol.col >= part.col - 1 && symbol.col <= part.col + part.length)
     && (symbol.row >= part.row - 1 && symbol.row <= part.row + 1)
-
-parseSchematics :: Array String -> EngineSchematics
-parseSchematics inputRows = go 0 inputRows
-  where
-  go row inputRows' = case uncons inputRows' of
-    Just { head: x, tail: xs } -> combineSchematics (parseSchematicsRow row x) (go (row + 1) xs)
-    Nothing -> emptySchematics
-
-parseSchematicsRow :: Int -> String -> EngineSchematics
-parseSchematicsRow _ "" = emptySchematics
-
-parseSchematicsRow row input = go 0 row input
-  where
-  go _ _ "" = emptySchematics
-
-  go col' row' input' =
-    let
-      partNum = takeWhile isDecDigit input'
-
-      symbol = takeWhile isSymbol input'
-
-      remaining = dropWhile isPeriod (drop (length partNum + length symbol) input')
-
-      droppedNum = (length input') - (length remaining)
-    in
-      case { p: partNum, s: symbol } of
-        { p }
-          | p /= "" -> addEnginePart (go (col' + droppedNum) row remaining) { col: col', row: row', num: parseNum (partNum), length: length partNum }
-        { s }
-          | s /= "" -> addEngineSymbol (go (col' + droppedNum) row remaining) { col: col', row: row', symbol: s }
-        _ -> go (col' + droppedNum) row' remaining
-
-parseNum :: String -> Int
-parseNum s = fromMaybe 0 (fromString s)
 
 isPeriod :: CodePoint -> Boolean
 isPeriod cp = cp == codePointFromChar '.'
 
+isNewLine :: CodePoint -> Boolean
+isNewLine cp = cp == codePointFromChar '\n'
+
 isSymbol :: CodePoint → Boolean
-isSymbol = (not isPeriod) && (not isDecDigit)
-
-addEnginePart :: EngineSchematics -> EnginePart -> EngineSchematics
-addEnginePart e ep = e { parts = ep : e.parts }
-
-addEngineSymbol :: EngineSchematics -> EngineSymbol -> EngineSchematics
-addEngineSymbol e symbol = e { symbols = symbol : e.symbols }
+isSymbol = (not isPeriod) && (not isDecDigit) && (not isNewLine)
