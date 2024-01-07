@@ -52,6 +52,16 @@ workspace:
         - prelude
         - utils
       test_dependencies: []
+    07-camel-cards:
+      path: 07-camel-cards
+      needed_by: []
+      dependencies:
+        - console
+        - effect
+        - prelude
+        - sized-vectors
+        - utils
+      test_dependencies: []
     template:
       path: template
       needed_by: []
@@ -65,6 +75,7 @@ workspace:
       path: utils
       needed_by:
         - template
+        - 07-camel-cards
         - 06-wait-for-it
         - 04-scratchcards
         - 03-gear-ratios
@@ -546,6 +557,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -573,10 +585,71 @@ packages:
         - tailrec
         - transformers
         - unsafe-coerce
+  argonaut:
+    needed_by:
+      - 07-camel-cards
+    package:
+      type: registry
+      version: 9.0.0
+      integrity: sha256-9sHzkzcFkaMUa9+3FjIybJDYnHtY4Jp4zHOJ84qPTXo=
+      dependencies:
+        - argonaut-codecs
+        - argonaut-core
+        - argonaut-traversals
+  argonaut-codecs:
+    needed_by:
+      - 07-camel-cards
+    package:
+      type: registry
+      version: 9.1.0
+      integrity: sha256-N6efXByUeg848ompEqJfVvZuZPfdRYDGlTDFn0G0Oh8=
+      dependencies:
+        - argonaut-core
+        - arrays
+        - effect
+        - foreign-object
+        - identity
+        - integers
+        - maybe
+        - nonempty
+        - ordered-collections
+        - prelude
+        - record
+  argonaut-core:
+    needed_by:
+      - 07-camel-cards
+    package:
+      type: registry
+      version: 7.0.0
+      integrity: sha256-RC82GfAjItydxrO24cdX373KHVZiLqybu19b5X8u7B4=
+      dependencies:
+        - arrays
+        - control
+        - either
+        - foreign-object
+        - functions
+        - gen
+        - maybe
+        - nonempty
+        - prelude
+        - strings
+        - tailrec
+  argonaut-traversals:
+    needed_by:
+      - 07-camel-cards
+    package:
+      type: registry
+      version: 10.0.0
+      integrity: sha256-9nSfqR70rjiNWVVsCoK+jrm9dmyZTx89IKNYO6uNUIk=
+      dependencies:
+        - argonaut-codecs
+        - argonaut-core
+        - profunctor-lenses
   arraybuffer-types:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -591,6 +664,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -630,6 +704,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -670,6 +745,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -686,6 +762,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -703,6 +780,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -722,6 +800,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -738,6 +817,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -768,6 +848,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -787,6 +868,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -802,6 +884,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -820,6 +903,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -844,6 +928,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -862,6 +947,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -877,6 +963,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -902,6 +989,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -921,10 +1009,31 @@ packages:
         - prelude
         - strings
         - transformers
+  foreign-object:
+    needed_by:
+      - 07-camel-cards
+    package:
+      type: registry
+      version: 4.1.0
+      integrity: sha256-q24okj6mT+yGHYQ+ei/pYPj5ih6sTbu7eDv/WU56JVo=
+      dependencies:
+        - arrays
+        - foldable-traversable
+        - functions
+        - gen
+        - lists
+        - maybe
+        - prelude
+        - st
+        - tailrec
+        - tuples
+        - typelevel-prelude
+        - unfoldable
   functions:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -940,6 +1049,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -967,6 +1077,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -991,6 +1102,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1009,6 +1121,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1026,6 +1139,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1042,6 +1156,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1062,6 +1177,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1078,6 +1194,7 @@ packages:
         - prelude
   lcg:
     needed_by:
+      - 07-camel-cards
       - 06-wait-for-it
     package:
       type: registry
@@ -1094,6 +1211,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1130,6 +1248,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1148,6 +1267,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1164,6 +1284,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1184,6 +1305,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1205,6 +1327,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1236,6 +1359,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1251,6 +1375,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1273,6 +1398,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1293,6 +1419,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1309,6 +1436,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1326,6 +1454,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1342,6 +1471,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1367,6 +1497,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1383,6 +1514,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1442,6 +1574,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1456,6 +1589,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1470,6 +1604,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1488,8 +1623,37 @@ packages:
         - newtype
         - prelude
         - tuples
+  profunctor-lenses:
+    needed_by:
+      - 07-camel-cards
+    package:
+      type: registry
+      version: 8.0.0
+      integrity: sha256-K7f29rHRHgVSb2Y/PaSKtfYPriP6n87BJNO7EhsZHas=
+      dependencies:
+        - arrays
+        - bifunctors
+        - const
+        - control
+        - distributive
+        - either
+        - foldable-traversable
+        - foreign-object
+        - functors
+        - identity
+        - lists
+        - maybe
+        - newtype
+        - ordered-collections
+        - partial
+        - prelude
+        - profunctor
+        - record
+        - transformers
+        - tuples
   quickcheck:
     needed_by:
+      - 07-camel-cards
       - 06-wait-for-it
     package:
       type: registry
@@ -1535,6 +1699,7 @@ packages:
         - quickcheck
   random:
     needed_by:
+      - 07-camel-cards
       - 06-wait-for-it
     package:
       type: registry
@@ -1545,6 +1710,7 @@ packages:
         - integers
   record:
     needed_by:
+      - 07-camel-cards
       - 06-wait-for-it
     package:
       type: registry
@@ -1558,6 +1724,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1574,6 +1741,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1585,10 +1753,28 @@ packages:
       integrity: sha256-a1ibQkiUcbODbLE/WAq7Ttbbh9ex+x33VCQ7GngKudU=
       dependencies:
         - unsafe-coerce
+  sized-vectors:
+    needed_by:
+      - 07-camel-cards
+    package:
+      type: registry
+      version: 5.0.2
+      integrity: sha256-L7gThpeZqzYA41xs94DegbWS3Mzpp5u9/tABIaHmIcs=
+      dependencies:
+        - argonaut
+        - arrays
+        - distributive
+        - foldable-traversable
+        - maybe
+        - prelude
+        - quickcheck
+        - typelevel
+        - unfoldable
   st:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1607,6 +1793,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1637,6 +1824,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1659,6 +1847,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1687,6 +1876,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1704,6 +1894,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1714,10 +1905,34 @@ packages:
       version: 4.0.1
       integrity: sha256-Hs9D6Y71zFi/b+qu5NSbuadUQXe5iv5iWx0226vOHUw=
       dependencies: []
+  typelevel:
+    needed_by:
+      - 07-camel-cards
+    package:
+      type: registry
+      version: 6.0.0
+      integrity: sha256-Iu7INcwTC/SbKcienMe7KKQvWku2VhCZSGCvrQWVVoc=
+      dependencies:
+        - partial
+        - prelude
+        - tuples
+        - typelevel-prelude
+        - unsafe-coerce
+  typelevel-prelude:
+    needed_by:
+      - 07-camel-cards
+    package:
+      type: registry
+      version: 7.0.0
+      integrity: sha256-uFF2ph+vHcQpfPuPf2a3ukJDFmLhApmkpTMviHIWgJM=
+      dependencies:
+        - prelude
+        - type-equality
   unfoldable:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1737,6 +1952,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios
@@ -1754,6 +1970,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 07-camel-cards
       - 06-wait-for-it
       - 04-scratchcards
       - 03-gear-ratios

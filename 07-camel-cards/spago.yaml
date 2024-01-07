@@ -1,0 +1,11 @@
+package:
+  name: 07-camel-cards
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - utils
+    - sized-vectors
+  test:
+    main: Test.Main
+    dependencies: []
