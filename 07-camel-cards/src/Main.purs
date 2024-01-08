@@ -2,13 +2,14 @@ module Main where
 
 import Prelude
 import Control.Alt ((<|>))
-import Data.Array (mapMaybe, sort)
+import Data.Array (mapMaybe)
+import Data.Array as Array
 import Data.Either (hush)
-import Data.Foldable (any, foldl, length)
+import Data.Foldable (all, foldl)
 import Data.Generic.Rep (class Generic)
-import Data.List (List(..), (:))
-import Data.Map (Map, empty, filter, insertWith, values)
-import Data.Maybe (Maybe)
+import Data.List (List(..), modifyAt, reverse, sort, (:))
+import Data.Map (empty, insertWith, pop, values)
+import Data.Maybe (Maybe, fromMaybe)
 import Data.Show.Generic (genericShow)
 import Data.Tuple (snd)
 import Data.Tuple.Nested ((/\))
@@ -46,7 +47,8 @@ compareHighCards (a : as) (b : bs)
   | otherwise = compare a b
 
 data Card
-  = Two
+  = Joker
+  | Two
   | Three
   | Four
   | Five
@@ -78,6 +80,10 @@ data HandType
   | FourOfKind
   | FiveOfKind
 
+data JRule
+  = IsJack
+  | IsJoker
+
 derive instance eqHandType :: Eq HandType
 
 derive instance ordHandType :: Ord HandType
@@ -91,34 +97,38 @@ main :: Effect Unit
 main = do
   inputLines <- readLines "07-camel-cards/input.txt"
   let
-    hands = sort $ mapMaybe parseHand inputLines
+    hands = Array.sort $ mapMaybe (parseHand IsJack) inputLines
 
-    totalWinnings =
-      snd
-        $ foldl
-            ( \(i /\ acc) hand ->
-                (i + 1) /\ (acc + (handBid hand) * (i + 1))
-            )
-            (0 /\ 0)
-            hands
-  log $ show $ "Part1 (total winnings): " <> (show $ totalWinnings)
+    handsWithJoker = Array.sort $ mapMaybe (parseHand IsJoker) inputLines
+  log $ show $ "Part1 (total winnings): " <> (show $ winnings hands)
+  log $ show $ "Part2 (total winnings with jokers): " <> (show $ winnings handsWithJoker)
 
-parseHand :: String -> Maybe Hand
-parseHand input = hush $ runParser input handParser
+winnings :: Array Hand -> Int
+winnings hands =
+  snd
+    $ foldl
+        ( \(i /\ acc) hand ->
+            (i + 1) /\ (acc + (handBid hand) * (i + 1))
+        )
+        (0 /\ 0)
+        hands
 
-handParser :: Parser String Hand
-handParser = do
-  cards' <- many cardParser
+parseHand :: JRule -> String -> Maybe Hand
+parseHand j input = hush $ runParser input (handParser j)
+
+handParser :: JRule -> Parser String Hand
+handParser jCard = do
+  cards' <- many (cardParser jCard)
   skipSpaces
   bid' <- intDecimal
   pure (Hand { cards: cards', bid: bid' })
 
-cardParser :: Parser String Card
-cardParser =
+cardParser :: JRule -> Parser String Card
+cardParser jRule =
   (string "A" $> Ace)
     <|> (string "K" $> King)
     <|> (string "Q" $> Queen)
-    <|> (string "J" $> Jack)
+    <|> jCardParser jRule
     <|> (string "T" $> Ten)
     <|> (string "9" $> Nine)
     <|> (string "8" $> Eight)
@@ -129,18 +139,38 @@ cardParser =
     <|> (string "3" $> Three)
     <|> (string "2" $> Two)
 
+jCardParser :: JRule -> Parser String Card
+jCardParser IsJack = string "J" $> Jack
+
+jCardParser IsJoker = string "J" $> Joker
+
 handType :: List Card -> HandType
 handType cards
-  | nCards 5 cards = FiveOfKind
-  | nCards 4 cards = FourOfKind
-  | nCards 3 cards && nCards 2 cards = FullHouse
-  | nCards 3 cards = ThreeOfKind
-  | length (filter (\count -> count == 2) (cardCounts cards)) == 2 = TwoPairs
-  | nCards 2 cards = OnePair
-  | otherwise = HighCard
+  | all isJoker cards = FiveOfKind
 
-nCards :: Int -> List Card -> Boolean
-nCards n cards = any (\count -> count == n) (values $ cardCounts cards)
+handType cards = case cardCounts cards of
+  (5 : _) -> FiveOfKind
+  (4 : _) -> FourOfKind
+  (3 : 2 : _) -> FullHouse
+  (3 : _) -> ThreeOfKind
+  (2 : 2 : _) -> TwoPairs
+  (2 : _) -> OnePair
+  _ -> HighCard
 
-cardCounts :: List Card -> Map Card Int
-cardCounts cards = foldl (\map card -> insertWith (+) card 1 map) empty cards
+isJoker :: Card -> Boolean
+isJoker Joker = true
+
+isJoker _ = false
+
+cardCounts :: List Card -> List Int
+cardCounts cards =
+  let
+    counts = foldl (\map card -> insertWith (+) card 1 map) empty cards
+
+    (jokerCount /\ countsWithoutJoker) = fromMaybe (0 /\ counts) (pop Joker counts)
+
+    countsSorted = reverse $ sort $ values countsWithoutJoker
+
+    jokersAddedToBiggestCount = modifyAt 0 (_ + jokerCount) countsSorted
+  in
+    fromMaybe Nil jokersAddedToBiggestCount
