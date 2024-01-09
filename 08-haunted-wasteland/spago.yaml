@@ -1,0 +1,12 @@
+package:
+  name: 08-haunted-wasteland
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - utils
+    - stringutils
+    - js-bigints
+  test:
+    main: Test.Main
+    dependencies: []
