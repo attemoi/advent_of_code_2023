@@ -1,0 +1,10 @@
+package:
+  name: 05-seeds
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - utils
+  test:
+    main: Test.Main
+    dependencies: []
