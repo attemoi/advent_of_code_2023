@@ -1,0 +1,11 @@
+package:
+  name: 10-pipe-maze
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - utils
+    - spec
+  test:
+    main: Test.Main
+    dependencies: []

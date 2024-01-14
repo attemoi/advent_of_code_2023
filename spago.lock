@@ -92,6 +92,16 @@ workspace:
         - spec
         - utils
       test_dependencies: []
+    10-pipe-maze:
+      path: 10-pipe-maze
+      needed_by: []
+      dependencies:
+        - console
+        - effect
+        - prelude
+        - spec
+        - utils
+      test_dependencies: []
     template:
       path: template
       needed_by: []
@@ -105,6 +115,7 @@ workspace:
       path: utils
       needed_by:
         - template
+        - 10-pipe-maze
         - 09-mirage-maintenance
         - 08-haunted-wasteland
         - 07-camel-cards
@@ -590,6 +601,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -623,6 +635,7 @@ packages:
         - unsafe-coerce
   ansi:
     needed_by:
+      - 10-pipe-maze
       - 09-mirage-maintenance
     package:
       type: registry
@@ -696,6 +709,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -714,6 +728,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -755,6 +770,7 @@ packages:
         - prelude
   avar:
     needed_by:
+      - 10-pipe-maze
       - 09-mirage-maintenance
     package:
       type: registry
@@ -771,6 +787,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -813,6 +830,7 @@ packages:
         - strings
   catenable-lists:
     needed_by:
+      - 10-pipe-maze
       - 09-mirage-maintenance
     package:
       type: registry
@@ -830,6 +848,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -850,6 +869,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -871,6 +891,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -894,6 +915,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -914,6 +936,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -946,6 +969,7 @@ packages:
         - tuples
   debug:
     needed_by:
+      - 10-pipe-maze
       - 09-mirage-maintenance
     package:
       type: registry
@@ -958,6 +982,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -981,6 +1006,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1000,6 +1026,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1022,6 +1049,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1050,6 +1078,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1072,6 +1101,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1091,6 +1121,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1120,6 +1151,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1165,6 +1197,7 @@ packages:
         - unfoldable
   fork:
     needed_by:
+      - 10-pipe-maze
       - 09-mirage-maintenance
     package:
       type: registry
@@ -1174,6 +1207,7 @@ packages:
         - aff
   free:
     needed_by:
+      - 10-pipe-maze
       - 09-mirage-maintenance
     package:
       type: registry
@@ -1198,6 +1232,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1217,6 +1252,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1248,6 +1284,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1276,6 +1313,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1298,6 +1336,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1319,6 +1358,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1350,6 +1390,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1374,6 +1415,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1411,6 +1453,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1451,6 +1494,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1471,6 +1515,7 @@ packages:
         - prelude
   mmorph:
     needed_by:
+      - 10-pipe-maze
       - 09-mirage-maintenance
     package:
       type: registry
@@ -1484,6 +1529,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1504,6 +1550,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1528,6 +1575,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1553,6 +1601,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1588,6 +1637,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1607,6 +1657,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1633,6 +1684,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1657,6 +1709,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1677,6 +1730,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1698,6 +1752,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1718,6 +1773,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1747,6 +1803,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1767,6 +1824,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1830,6 +1888,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1846,6 +1905,7 @@ packages:
       dependencies: []
   pipes:
     needed_by:
+      - 10-pipe-maze
       - 09-mirage-maintenance
     package:
       type: registry
@@ -1863,6 +1923,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -1881,6 +1942,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -2004,6 +2066,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -2024,6 +2087,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -2058,6 +2122,7 @@ packages:
         - unfoldable
   spec:
     needed_by:
+      - 10-pipe-maze
       - 09-mirage-maintenance
     package:
       type: registry
@@ -2096,6 +2161,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -2118,6 +2184,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -2166,6 +2233,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -2192,6 +2260,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -2224,6 +2293,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -2245,6 +2315,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -2286,6 +2357,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -2309,6 +2381,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
@@ -2330,6 +2403,7 @@ packages:
     needed_by:
       - utils
       - template
+      - 10-pipe-maze
       - 09-mirage-maintenance
       - 08-haunted-wasteland
       - 07-camel-cards
