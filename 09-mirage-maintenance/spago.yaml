@@ -1,0 +1,10 @@
+package:
+  name: 09-mirage-maintenance
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - utils
+  test:
+    main: Test.Main
+    dependencies: []
