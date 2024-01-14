@@ -89,6 +89,7 @@ workspace:
         - console
         - effect
         - prelude
+        - spec
         - utils
       test_dependencies: []
     template:
@@ -620,6 +621,17 @@ packages:
         - tailrec
         - transformers
         - unsafe-coerce
+  ansi:
+    needed_by:
+      - 09-mirage-maintenance
+    package:
+      type: registry
+      version: 7.0.0
+      integrity: sha256-ZMB6HD+q9CXvn9fRCmJ8dvuDrOVHcjombL3oNOerVnE=
+      dependencies:
+        - foldable-traversable
+        - lists
+        - strings
   argonaut:
     needed_by:
       - 07-camel-cards
@@ -741,6 +753,20 @@ packages:
         - console
         - effect
         - prelude
+  avar:
+    needed_by:
+      - 09-mirage-maintenance
+    package:
+      type: registry
+      version: 5.0.0
+      integrity: sha256-e7hf0x4hEpcygXP0LtvfvAQ49Bbj2aWtZT3gqM///0A=
+      dependencies:
+        - aff
+        - effect
+        - either
+        - exceptions
+        - functions
+        - maybe
   bifunctors:
     needed_by:
       - utils
@@ -785,6 +811,21 @@ packages:
         - quickcheck
         - quickcheck-laws
         - strings
+  catenable-lists:
+    needed_by:
+      - 09-mirage-maintenance
+    package:
+      type: registry
+      version: 7.0.0
+      integrity: sha256-76vYENhwF4BWTBsjeLuErCH2jqVT4M3R1HX+4RwSftA=
+      dependencies:
+        - control
+        - foldable-traversable
+        - lists
+        - maybe
+        - prelude
+        - tuples
+        - unfoldable
   console:
     needed_by:
       - utils
@@ -903,6 +944,16 @@ packages:
         - partial
         - prelude
         - tuples
+  debug:
+    needed_by:
+      - 09-mirage-maintenance
+    package:
+      type: registry
+      version: 6.0.2
+      integrity: sha256-vmkYFuXYuELBzeauvgHG6E6Kf/Hp1dAnxwE9ByHfwSg=
+      dependencies:
+        - functions
+        - prelude
   distributive:
     needed_by:
       - utils
@@ -1112,6 +1163,37 @@ packages:
         - tuples
         - typelevel-prelude
         - unfoldable
+  fork:
+    needed_by:
+      - 09-mirage-maintenance
+    package:
+      type: registry
+      version: 6.0.0
+      integrity: sha256-X7u0SuCvFbLbzuNEKLBNuWjmcroqMqit4xEzpQwAP7E=
+      dependencies:
+        - aff
+  free:
+    needed_by:
+      - 09-mirage-maintenance
+    package:
+      type: registry
+      version: 7.1.0
+      integrity: sha256-JAumgEsGSzJCNLD8AaFvuX7CpqS5yruCngi6yI7+V5k=
+      dependencies:
+        - catenable-lists
+        - control
+        - distributive
+        - either
+        - exists
+        - foldable-traversable
+        - invariant
+        - lazy
+        - maybe
+        - prelude
+        - tailrec
+        - transformers
+        - tuples
+        - unsafe-coerce
   functions:
     needed_by:
       - utils
@@ -1387,6 +1469,17 @@ packages:
         - invariant
         - newtype
         - prelude
+  mmorph:
+    needed_by:
+      - 09-mirage-maintenance
+    package:
+      type: registry
+      version: 7.0.0
+      integrity: sha256-urZlZNNqGeQFe5D/ClHlR8QgGBNHTMFPtJ5S5IpflTQ=
+      dependencies:
+        - free
+        - functors
+        - transformers
   newtype:
     needed_by:
       - utils
@@ -1751,6 +1844,21 @@ packages:
       version: 4.0.0
       integrity: sha256-fwXerld6Xw1VkReh8yeQsdtLVrjfGiVuC5bA1Wyo/J4=
       dependencies: []
+  pipes:
+    needed_by:
+      - 09-mirage-maintenance
+    package:
+      type: registry
+      version: 8.0.0
+      integrity: sha256-kvfqGM4cPA/wCcBHbp5psouFw5dZGvku2462x7ZBwSY=
+      dependencies:
+        - aff
+        - lists
+        - mmorph
+        - prelude
+        - tailrec
+        - transformers
+        - tuples
   prelude:
     needed_by:
       - utils
@@ -1948,6 +2056,42 @@ packages:
         - quickcheck
         - typelevel
         - unfoldable
+  spec:
+    needed_by:
+      - 09-mirage-maintenance
+    package:
+      type: registry
+      version: 7.5.5
+      integrity: sha256-HdyBH7Ys1/m2SdTq3u2u9LdQ4cGeaohWeEMYay2mHdU=
+      dependencies:
+        - aff
+        - ansi
+        - arrays
+        - avar
+        - bifunctors
+        - control
+        - datetime
+        - debug
+        - effect
+        - either
+        - exceptions
+        - foldable-traversable
+        - fork
+        - identity
+        - integers
+        - lists
+        - maybe
+        - newtype
+        - now
+        - ordered-collections
+        - parallel
+        - pipes
+        - prelude
+        - refs
+        - strings
+        - tailrec
+        - transformers
+        - tuples
   st:
     needed_by:
       - utils
