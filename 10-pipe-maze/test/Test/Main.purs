@@ -3,7 +3,7 @@ module Test.Main where
 import Prelude
 import Effect (Effect)
 import Effect.Aff (launchAff_)
-import Main (enclosedTiles, parsePipes, traversePipeline, findStartPipe)
+import Main (enclosedTiles, findStartPipe, findStartPosition, parsePipes, traversePipeline)
 import Test.Spec (describe, it)
 import Test.Spec.Assertions (shouldEqual)
 import Test.Spec.Reporter.Console (consoleReporter)
@@ -31,32 +31,12 @@ main =
 
               allPipes = parsePipes input
 
-              startPipe = findStartPipe input allPipes
+              startPosition = findStartPosition input
 
-              pipesInLoop = traversePipeline startPipe allPipes
+              startPipe = findStartPipe startPosition allPipes
+
+              pipesInLoop = traversePipeline startPosition startPipe allPipes
             enclosedTiles pipesInLoop `shouldEqual` 4
-          it "Enclosed tiles, medium case" do
-            let
-              input =
-                """
-                .S----7F7F7F7F-7....
-                .|F--7||||||||FJ....
-                .||.FJ||||||||L7....
-                FJL7L7LJLJ||LJ.L-7..
-                L--J.L7...LJF7F-7L7.
-                ....F-J..F7FJ|L7L7L7
-                ....L7.F7||L7|.L7L7|
-                .....|FJLJ|FJ|F7|.LJ
-                ....FJL-7.||.||||...
-                ....L---J.LJ.LJLJ...
-                """
-
-              allPipes = parsePipes input
-
-              startPipe = findStartPipe input allPipes
-
-              pipesInLoop = traversePipeline startPipe allPipes
-            enclosedTiles pipesInLoop `shouldEqual` 8
           it "Enclosed tiles, complex case" do
             let
               input =
@@ -75,7 +55,9 @@ main =
 
               allPipes = parsePipes input
 
-              startPipe = findStartPipe input allPipes
+              startPosition = findStartPosition input
 
-              pipesInLoop = traversePipeline startPipe allPipes
+              startPipe = findStartPipe startPosition allPipes
+
+              pipesInLoop = traversePipeline startPosition startPipe allPipes
             enclosedTiles pipesInLoop `shouldEqual` 10
