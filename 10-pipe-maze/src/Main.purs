@@ -2,9 +2,11 @@ module Main where
 
 import Prelude
 import Control.Alt ((<|>))
+import Data.Array as Array
 import Data.Either (hush)
+import Data.Foldable (sum)
 import Data.Generic.Rep (class Generic)
-import Data.List (List(..), catMaybes, filter, find, head, length, (:))
+import Data.List (List(..), catMaybes, filter, find, groupBy, head, length, sortBy, (:))
 import Data.List.NonEmpty (toList)
 import Data.Maybe (Maybe(..), fromMaybe)
 import Data.Show.Generic (genericShow)
@@ -59,15 +61,79 @@ main :: Effect Unit
 main = do
   input <- readFile "10-pipe-maze/input.txt"
   let
-    pipes = catMaybes $ toList $ hush <$> splitCap input tileParser
+    pipes = parsePipes input
 
-    startPos = fromMaybe { x: 0, y: 0 } $ head $ catMaybes $ toList $ hush <$> splitCap input startPositionParser
+    startPipe = findStartPipe input pipes
 
-    startPipe = case determineStartPipe startPos pipes of
-      Nothing -> { pos: startPos, directions: North /\ West }
-      Just a -> a
-  log $ show $ "Part 1, steps to furthest point in pipeline"
-    <> (show $ length (traversePipeline startPipe pipes) / 2)
+    pipesInLoop = traversePipeline startPipe pipes
+  log $ show $ "Part 1, steps to furthest point in pipeline: "
+    <> (show $ length pipesInLoop / 2)
+  log $ show $ "Part 2, number of enclosed tiles: "
+    <> (show $ enclosedTiles pipesInLoop)
+
+findStartPipe :: String -> List Pipe -> Pipe
+findStartPipe input otherPipes = case determineStartPipe startPos otherPipes of
+  Nothing -> { pos: startPos, directions: North /\ West }
+  Just a -> a
+  where
+  startPos = fromMaybe { x: 0, y: 0 } $ head $ catMaybes $ toList $ hush <$> splitCap input startPositionParser
+
+determineStartPipe :: Position -> List Pipe -> Maybe Pipe
+determineStartPipe startPos pipes =
+  let
+    directionsThatConnect =
+      filter
+        (\dir -> connectsToDir startPos dir pipes)
+        (North : East : South : West : Nil)
+  in
+    case directionsThatConnect of
+      a : b : _ -> Just { pos: startPos, directions: a /\ b }
+      _ -> Nothing
+
+parsePipes :: String -> List Pipe
+parsePipes input = catMaybes $ toList $ hush <$> splitCap input tileParser
+
+enclosedTiles :: List Pipe -> Int
+enclosedTiles pipes = pointsInPolygon pipes
+
+pointsInPolygon :: List Pipe -> Int
+pointsInPolygon pipes = sum $ map pointsInRow rows
+  where
+  rows =
+    sortPipes pipes
+      # groupBy (\a b -> a.pos.y == b.pos.y)
+      # map toList
+      # map (sortBy (\a b -> compare a.pos.x b.pos.x))
+
+-- Got stack overflow when sorting list, so converting to array and back here
+sortPipes :: List Pipe -> List Pipe
+sortPipes pipes =
+  Array.fromFoldable pipes
+    # Array.sortWith (_.pos.x)
+    # Array.sortWith (_.pos.y)
+    # Array.toUnfoldable
+
+pointsInRow :: List Pipe -> Int
+pointsInRow pipes = go northConnectingPipes
+  where
+  northConnectingPipes = filter connectsNorth pipes
+
+  go (a : b : xs) = b.pos.x - a.pos.x - 1 - (numPipesBetween a b pipes) + (go xs)
+
+  go _ = 0
+
+numPipesBetween :: Pipe -> Pipe -> List Pipe -> Int
+numPipesBetween a b pipeRow =
+  length
+    $ filter
+        (\pipe -> a.pos.x < pipe.pos.x && pipe.pos.x < b.pos.x)
+        pipeRow
+
+connectsNorth :: Pipe -> Boolean
+connectsNorth { directions: a /\ b } = a == North || b == North
+
+row :: Int -> List Pipe -> List Pipe
+row num pipes = filter (\pipe -> pipe.pos.y == num) pipes
 
 traversePipeline :: Pipe -> List Pipe -> List Pipe
 traversePipeline startPipe allPipes = go Nil startPipe (fst startPipe.directions)
@@ -81,18 +147,6 @@ traversePipeline startPipe allPipes = go Nil startPipe (fst startPipe.directions
       case nextPipe of
         Nothing -> pipe : acc
         (Just p) -> go (pipe : acc) p (opposite outDir)
-
-determineStartPipe :: Position -> List Pipe -> Maybe Pipe
-determineStartPipe startPos pipes =
-  let
-    directionsThatConnect =
-      filter
-        (\dir -> connectsToDir startPos dir pipes)
-        (North : East : South : West : Nil)
-  in
-    case directionsThatConnect of
-      a : b : _ -> Just { pos: startPos, directions: a /\ b }
-      _ -> Nothing
 
 connectsToDir :: Position -> Direction -> List Pipe -> Boolean
 connectsToDir pos dir pipes = case pipeInPos (move pos dir) pipes of
