@@ -2,7 +2,6 @@ workspace:
   packages:
     01-trebuchet:
       path: 01-trebuchet
-      needed_by: []
       dependencies:
         - aff
         - console
@@ -13,9 +12,65 @@ workspace:
         - strings
         - utils
       test_dependencies: []
+      build_plan:
+        - aff
+        - arraybuffer-types
+        - arrays
+        - bifunctors
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lists
+        - maybe
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - prelude
+        - profunctor
+        - refs
+        - safe-coerce
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
     02-cube-conundrum:
       path: 02-cube-conundrum
-      needed_by: []
       dependencies:
         - console
         - effect
@@ -23,9 +78,65 @@ workspace:
         - prelude
         - utils
       test_dependencies: []
+      build_plan:
+        - aff
+        - arraybuffer-types
+        - arrays
+        - bifunctors
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lists
+        - maybe
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - prelude
+        - profunctor
+        - refs
+        - safe-coerce
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
     03-gear-ratios:
       path: 03-gear-ratios
-      needed_by: []
       dependencies:
         - console
         - effect
@@ -33,27 +144,196 @@ workspace:
         - prelude
         - utils
       test_dependencies: []
+      build_plan:
+        - aff
+        - arraybuffer-types
+        - arrays
+        - bifunctors
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lists
+        - matrices
+        - maybe
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - prelude
+        - profunctor
+        - refs
+        - safe-coerce
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
     04-scratchcards:
       path: 04-scratchcards
-      needed_by: []
       dependencies:
         - console
         - effect
         - prelude
         - utils
       test_dependencies: []
+      build_plan:
+        - aff
+        - arraybuffer-types
+        - arrays
+        - bifunctors
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lists
+        - maybe
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - prelude
+        - profunctor
+        - refs
+        - safe-coerce
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
     05-seeds:
       path: 05-seeds
-      needed_by: []
       dependencies:
         - console
         - effect
         - prelude
         - utils
       test_dependencies: []
+      build_plan:
+        - aff
+        - arraybuffer-types
+        - arrays
+        - bifunctors
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lists
+        - maybe
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - prelude
+        - profunctor
+        - refs
+        - safe-coerce
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
     06-wait-for-it:
       path: 06-wait-for-it
-      needed_by: []
       dependencies:
         - bigints
         - console
@@ -61,9 +341,72 @@ workspace:
         - prelude
         - utils
       test_dependencies: []
+      build_plan:
+        - aff
+        - arraybuffer-types
+        - arrays
+        - assert
+        - bifunctors
+        - bigints
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lcg
+        - lists
+        - maybe
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - prelude
+        - profunctor
+        - quickcheck
+        - quickcheck-laws
+        - random
+        - record
+        - refs
+        - safe-coerce
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
     07-camel-cards:
       path: 07-camel-cards
-      needed_by: []
       dependencies:
         - console
         - effect
@@ -71,9 +414,78 @@ workspace:
         - sized-vectors
         - utils
       test_dependencies: []
+      build_plan:
+        - aff
+        - argonaut
+        - argonaut-codecs
+        - argonaut-core
+        - argonaut-traversals
+        - arraybuffer-types
+        - arrays
+        - bifunctors
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - foreign-object
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lcg
+        - lists
+        - maybe
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - prelude
+        - profunctor
+        - profunctor-lenses
+        - quickcheck
+        - random
+        - record
+        - refs
+        - safe-coerce
+        - sized-vectors
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - typelevel
+        - typelevel-prelude
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
     08-haunted-wasteland:
       path: 08-haunted-wasteland
-      needed_by: []
       dependencies:
         - console
         - effect
@@ -82,9 +494,67 @@ workspace:
         - stringutils
         - utils
       test_dependencies: []
+      build_plan:
+        - aff
+        - arraybuffer-types
+        - arrays
+        - bifunctors
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-bigints
+        - js-date
+        - lazy
+        - lists
+        - maybe
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - prelude
+        - profunctor
+        - refs
+        - safe-coerce
+        - st
+        - strings
+        - stringutils
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
     09-mirage-maintenance:
       path: 09-mirage-maintenance
-      needed_by: []
       dependencies:
         - console
         - effect
@@ -92,9 +562,74 @@ workspace:
         - spec
         - utils
       test_dependencies: []
+      build_plan:
+        - aff
+        - ansi
+        - arraybuffer-types
+        - arrays
+        - avar
+        - bifunctors
+        - catenable-lists
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - debug
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - fork
+        - free
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lists
+        - maybe
+        - mmorph
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - pipes
+        - prelude
+        - profunctor
+        - refs
+        - safe-coerce
+        - spec
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
     10-pipe-maze:
       path: 10-pipe-maze
-      needed_by: []
       dependencies:
         - console
         - effect
@@ -102,36 +637,269 @@ workspace:
         - spec
         - utils
       test_dependencies: []
+      build_plan:
+        - aff
+        - ansi
+        - arraybuffer-types
+        - arrays
+        - avar
+        - bifunctors
+        - catenable-lists
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - debug
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - fork
+        - free
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lists
+        - maybe
+        - mmorph
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - pipes
+        - prelude
+        - profunctor
+        - refs
+        - safe-coerce
+        - spec
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
+    11-cosmic-expansion:
+      path: 11-cosmic-expansion
+      dependencies:
+        - console
+        - effect
+        - parsing
+        - prelude
+        - utils
+      test_dependencies: []
+      build_plan:
+        - aff
+        - arraybuffer-types
+        - arrays
+        - bifunctors
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lists
+        - maybe
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - prelude
+        - profunctor
+        - refs
+        - safe-coerce
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
     template:
       path: template
-      needed_by: []
       dependencies:
         - console
         - effect
         - prelude
         - utils
       test_dependencies: []
+      build_plan:
+        - aff
+        - arraybuffer-types
+        - arrays
+        - bifunctors
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lists
+        - maybe
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - prelude
+        - profunctor
+        - refs
+        - safe-coerce
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
+        - utils
     utils:
       path: utils
-      needed_by:
-        - template
-        - 10-pipe-maze
-        - 09-mirage-maintenance
-        - 08-haunted-wasteland
-        - 07-camel-cards
-        - 06-wait-for-it
-        - 05-seeds
-        - 04-scratchcards
-        - 03-gear-ratios
-        - 02-cube-conundrum
-        - 01-trebuchet
       dependencies:
         - console
         - effect
         - node-fs
+        - parsing
         - prelude
         - unicode
       test_dependencies: []
+      build_plan:
+        - aff
+        - arraybuffer-types
+        - arrays
+        - bifunctors
+        - console
+        - const
+        - contravariant
+        - control
+        - datetime
+        - distributive
+        - effect
+        - either
+        - enums
+        - exceptions
+        - exists
+        - foldable-traversable
+        - foreign
+        - functions
+        - functors
+        - gen
+        - identity
+        - integers
+        - invariant
+        - js-date
+        - lazy
+        - lists
+        - maybe
+        - newtype
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-path
+        - node-streams
+        - nonempty
+        - now
+        - nullable
+        - numbers
+        - ordered-collections
+        - orders
+        - parallel
+        - parsing
+        - partial
+        - prelude
+        - profunctor
+        - refs
+        - safe-coerce
+        - st
+        - strings
+        - tailrec
+        - transformers
+        - tuples
+        - type-equality
+        - unfoldable
+        - unicode
+        - unsafe-coerce
   package_set:
     address:
       registry: 47.5.1
@@ -598,1823 +1366,966 @@ workspace:
   extra_packages: {}
 packages:
   aff:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 7.1.0
-      integrity: sha256-7hOC6uQO9XBAI5FD8F33ChLjFAiZVfd4BJMqlMh7TNU=
-      dependencies:
-        - arrays
-        - bifunctors
-        - control
-        - datetime
-        - effect
-        - either
-        - exceptions
-        - foldable-traversable
-        - functions
-        - maybe
-        - newtype
-        - parallel
-        - prelude
-        - refs
-        - tailrec
-        - transformers
-        - unsafe-coerce
+    type: registry
+    version: 7.1.0
+    integrity: sha256-7hOC6uQO9XBAI5FD8F33ChLjFAiZVfd4BJMqlMh7TNU=
+    dependencies:
+      - arrays
+      - bifunctors
+      - control
+      - datetime
+      - effect
+      - either
+      - exceptions
+      - foldable-traversable
+      - functions
+      - maybe
+      - newtype
+      - parallel
+      - prelude
+      - refs
+      - tailrec
+      - transformers
+      - unsafe-coerce
   ansi:
-    needed_by:
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-    package:
-      type: registry
-      version: 7.0.0
-      integrity: sha256-ZMB6HD+q9CXvn9fRCmJ8dvuDrOVHcjombL3oNOerVnE=
-      dependencies:
-        - foldable-traversable
-        - lists
-        - strings
+    type: registry
+    version: 7.0.0
+    integrity: sha256-ZMB6HD+q9CXvn9fRCmJ8dvuDrOVHcjombL3oNOerVnE=
+    dependencies:
+      - foldable-traversable
+      - lists
+      - strings
   argonaut:
-    needed_by:
-      - 07-camel-cards
-    package:
-      type: registry
-      version: 9.0.0
-      integrity: sha256-9sHzkzcFkaMUa9+3FjIybJDYnHtY4Jp4zHOJ84qPTXo=
-      dependencies:
-        - argonaut-codecs
-        - argonaut-core
-        - argonaut-traversals
+    type: registry
+    version: 9.0.0
+    integrity: sha256-9sHzkzcFkaMUa9+3FjIybJDYnHtY4Jp4zHOJ84qPTXo=
+    dependencies:
+      - argonaut-codecs
+      - argonaut-core
+      - argonaut-traversals
   argonaut-codecs:
-    needed_by:
-      - 07-camel-cards
-    package:
-      type: registry
-      version: 9.1.0
-      integrity: sha256-N6efXByUeg848ompEqJfVvZuZPfdRYDGlTDFn0G0Oh8=
-      dependencies:
-        - argonaut-core
-        - arrays
-        - effect
-        - foreign-object
-        - identity
-        - integers
-        - maybe
-        - nonempty
-        - ordered-collections
-        - prelude
-        - record
+    type: registry
+    version: 9.1.0
+    integrity: sha256-N6efXByUeg848ompEqJfVvZuZPfdRYDGlTDFn0G0Oh8=
+    dependencies:
+      - argonaut-core
+      - arrays
+      - effect
+      - foreign-object
+      - identity
+      - integers
+      - maybe
+      - nonempty
+      - ordered-collections
+      - prelude
+      - record
   argonaut-core:
-    needed_by:
-      - 07-camel-cards
-    package:
-      type: registry
-      version: 7.0.0
-      integrity: sha256-RC82GfAjItydxrO24cdX373KHVZiLqybu19b5X8u7B4=
-      dependencies:
-        - arrays
-        - control
-        - either
-        - foreign-object
-        - functions
-        - gen
-        - maybe
-        - nonempty
-        - prelude
-        - strings
-        - tailrec
+    type: registry
+    version: 7.0.0
+    integrity: sha256-RC82GfAjItydxrO24cdX373KHVZiLqybu19b5X8u7B4=
+    dependencies:
+      - arrays
+      - control
+      - either
+      - foreign-object
+      - functions
+      - gen
+      - maybe
+      - nonempty
+      - prelude
+      - strings
+      - tailrec
   argonaut-traversals:
-    needed_by:
-      - 07-camel-cards
-    package:
-      type: registry
-      version: 10.0.0
-      integrity: sha256-9nSfqR70rjiNWVVsCoK+jrm9dmyZTx89IKNYO6uNUIk=
-      dependencies:
-        - argonaut-codecs
-        - argonaut-core
-        - profunctor-lenses
+    type: registry
+    version: 10.0.0
+    integrity: sha256-9nSfqR70rjiNWVVsCoK+jrm9dmyZTx89IKNYO6uNUIk=
+    dependencies:
+      - argonaut-codecs
+      - argonaut-core
+      - profunctor-lenses
   arraybuffer-types:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 3.0.2
-      integrity: sha256-mQKokysYVkooS4uXbO+yovmV/s8b138Ws3zQvOwIHRA=
-      dependencies: []
+    type: registry
+    version: 3.0.2
+    integrity: sha256-mQKokysYVkooS4uXbO+yovmV/s8b138Ws3zQvOwIHRA=
+    dependencies: []
   arrays:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 7.3.0
-      integrity: sha256-tmcklBlc/muUtUfr9RapdCPwnlQeB3aSrC4dK85gQlc=
-      dependencies:
-        - bifunctors
-        - control
-        - foldable-traversable
-        - functions
-        - maybe
-        - nonempty
-        - partial
-        - prelude
-        - safe-coerce
-        - st
-        - tailrec
-        - tuples
-        - unfoldable
-        - unsafe-coerce
+    type: registry
+    version: 7.3.0
+    integrity: sha256-tmcklBlc/muUtUfr9RapdCPwnlQeB3aSrC4dK85gQlc=
+    dependencies:
+      - bifunctors
+      - control
+      - foldable-traversable
+      - functions
+      - maybe
+      - nonempty
+      - partial
+      - prelude
+      - safe-coerce
+      - st
+      - tailrec
+      - tuples
+      - unfoldable
+      - unsafe-coerce
   assert:
-    needed_by:
-      - 06-wait-for-it
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-hCSYcCw9kj3qujoDcriWhCdmrpPZoguSPDZhEMnTl3A=
-      dependencies:
-        - console
-        - effect
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-hCSYcCw9kj3qujoDcriWhCdmrpPZoguSPDZhEMnTl3A=
+    dependencies:
+      - console
+      - effect
+      - prelude
   avar:
-    needed_by:
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-    package:
-      type: registry
-      version: 5.0.0
-      integrity: sha256-e7hf0x4hEpcygXP0LtvfvAQ49Bbj2aWtZT3gqM///0A=
-      dependencies:
-        - aff
-        - effect
-        - either
-        - exceptions
-        - functions
-        - maybe
+    type: registry
+    version: 5.0.0
+    integrity: sha256-e7hf0x4hEpcygXP0LtvfvAQ49Bbj2aWtZT3gqM///0A=
+    dependencies:
+      - aff
+      - effect
+      - either
+      - exceptions
+      - functions
+      - maybe
   bifunctors:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-/gZwC9YhNxZNQpnHa5BIYerCGM2jeX9ukZiEvYxm5Nw=
-      dependencies:
-        - const
-        - either
-        - newtype
-        - prelude
-        - tuples
+    type: registry
+    version: 6.0.0
+    integrity: sha256-/gZwC9YhNxZNQpnHa5BIYerCGM2jeX9ukZiEvYxm5Nw=
+    dependencies:
+      - const
+      - either
+      - newtype
+      - prelude
+      - tuples
   bigints:
-    needed_by:
-      - 06-wait-for-it
-    package:
-      type: registry
-      version: 7.0.1
-      integrity: sha256-M59p1lxLbLwLKAx8XMzrHrpExospxdsF9O1eovr0uRg=
-      dependencies:
-        - arrays
-        - assert
-        - console
-        - effect
-        - foldable-traversable
-        - integers
-        - maybe
-        - numbers
-        - partial
-        - prelude
-        - quickcheck
-        - quickcheck-laws
-        - strings
+    type: registry
+    version: 7.0.1
+    integrity: sha256-M59p1lxLbLwLKAx8XMzrHrpExospxdsF9O1eovr0uRg=
+    dependencies:
+      - arrays
+      - assert
+      - console
+      - effect
+      - foldable-traversable
+      - integers
+      - maybe
+      - numbers
+      - partial
+      - prelude
+      - quickcheck
+      - quickcheck-laws
+      - strings
   catenable-lists:
-    needed_by:
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-    package:
-      type: registry
-      version: 7.0.0
-      integrity: sha256-76vYENhwF4BWTBsjeLuErCH2jqVT4M3R1HX+4RwSftA=
-      dependencies:
-        - control
-        - foldable-traversable
-        - lists
-        - maybe
-        - prelude
-        - tuples
-        - unfoldable
+    type: registry
+    version: 7.0.0
+    integrity: sha256-76vYENhwF4BWTBsjeLuErCH2jqVT4M3R1HX+4RwSftA=
+    dependencies:
+      - control
+      - foldable-traversable
+      - lists
+      - maybe
+      - prelude
+      - tuples
+      - unfoldable
   console:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.1.0
-      integrity: sha256-CxmAzjgyuGDmt9FZW51VhV6rBPwR6o0YeKUzA9rSzcM=
-      dependencies:
-        - effect
-        - prelude
+    type: registry
+    version: 6.1.0
+    integrity: sha256-CxmAzjgyuGDmt9FZW51VhV6rBPwR6o0YeKUzA9rSzcM=
+    dependencies:
+      - effect
+      - prelude
   const:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-tNrxDW8D8H4jdHE2HiPzpLy08zkzJMmGHdRqt5BQuTc=
-      dependencies:
-        - invariant
-        - newtype
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-tNrxDW8D8H4jdHE2HiPzpLy08zkzJMmGHdRqt5BQuTc=
+    dependencies:
+      - invariant
+      - newtype
+      - prelude
   contravariant:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-TP+ooAp3vvmdjfQsQJSichF5B4BPDHp3wAJoWchip6c=
-      dependencies:
-        - const
-        - either
-        - newtype
-        - prelude
-        - tuples
+    type: registry
+    version: 6.0.0
+    integrity: sha256-TP+ooAp3vvmdjfQsQJSichF5B4BPDHp3wAJoWchip6c=
+    dependencies:
+      - const
+      - either
+      - newtype
+      - prelude
+      - tuples
   control:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-sH7Pg9E96JCPF9PIA6oQ8+BjTyO/BH1ZuE/bOcyj4Jk=
-      dependencies:
-        - newtype
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-sH7Pg9E96JCPF9PIA6oQ8+BjTyO/BH1ZuE/bOcyj4Jk=
+    dependencies:
+      - newtype
+      - prelude
   datetime:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.1.0
-      integrity: sha256-g/5X5BBegQWLpI9IWD+sY6mcaYpzzlW5lz5NBzaMtyI=
-      dependencies:
-        - bifunctors
-        - control
-        - either
-        - enums
-        - foldable-traversable
-        - functions
-        - gen
-        - integers
-        - lists
-        - maybe
-        - newtype
-        - numbers
-        - ordered-collections
-        - partial
-        - prelude
-        - tuples
+    type: registry
+    version: 6.1.0
+    integrity: sha256-g/5X5BBegQWLpI9IWD+sY6mcaYpzzlW5lz5NBzaMtyI=
+    dependencies:
+      - bifunctors
+      - control
+      - either
+      - enums
+      - foldable-traversable
+      - functions
+      - gen
+      - integers
+      - lists
+      - maybe
+      - newtype
+      - numbers
+      - ordered-collections
+      - partial
+      - prelude
+      - tuples
   debug:
-    needed_by:
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-    package:
-      type: registry
-      version: 6.0.2
-      integrity: sha256-vmkYFuXYuELBzeauvgHG6E6Kf/Hp1dAnxwE9ByHfwSg=
-      dependencies:
-        - functions
-        - prelude
+    type: registry
+    version: 6.0.2
+    integrity: sha256-vmkYFuXYuELBzeauvgHG6E6Kf/Hp1dAnxwE9ByHfwSg=
+    dependencies:
+      - functions
+      - prelude
   distributive:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-HTDdmEnzigMl+02SJB88j+gAXDx9VKsbvR4MJGDPbOQ=
-      dependencies:
-        - identity
-        - newtype
-        - prelude
-        - tuples
-        - type-equality
+    type: registry
+    version: 6.0.0
+    integrity: sha256-HTDdmEnzigMl+02SJB88j+gAXDx9VKsbvR4MJGDPbOQ=
+    dependencies:
+      - identity
+      - newtype
+      - prelude
+      - tuples
+      - type-equality
   effect:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 4.0.0
-      integrity: sha256-eBtZu+HZcMa5HilvI6kaDyVX3ji8p0W9MGKy2K4T6+M=
-      dependencies:
-        - prelude
+    type: registry
+    version: 4.0.0
+    integrity: sha256-eBtZu+HZcMa5HilvI6kaDyVX3ji8p0W9MGKy2K4T6+M=
+    dependencies:
+      - prelude
   either:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.1.0
-      integrity: sha256-6hgTPisnMWVwQivOu2PKYcH8uqjEOOqDyaDQVUchTpY=
-      dependencies:
-        - control
-        - invariant
-        - maybe
-        - prelude
+    type: registry
+    version: 6.1.0
+    integrity: sha256-6hgTPisnMWVwQivOu2PKYcH8uqjEOOqDyaDQVUchTpY=
+    dependencies:
+      - control
+      - invariant
+      - maybe
+      - prelude
   enums:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.1
-      integrity: sha256-HWaD73JFLorc4A6trKIRUeDMdzE+GpkJaEOM1nTNkC8=
-      dependencies:
-        - control
-        - either
-        - gen
-        - maybe
-        - newtype
-        - nonempty
-        - partial
-        - prelude
-        - tuples
-        - unfoldable
+    type: registry
+    version: 6.0.1
+    integrity: sha256-HWaD73JFLorc4A6trKIRUeDMdzE+GpkJaEOM1nTNkC8=
+    dependencies:
+      - control
+      - either
+      - gen
+      - maybe
+      - newtype
+      - nonempty
+      - partial
+      - prelude
+      - tuples
+      - unfoldable
   exceptions:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-y/xTAEIZIARCE+50/u1di0ncebJ+CIwNOLswyOWzMTw=
-      dependencies:
-        - effect
-        - either
-        - maybe
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-y/xTAEIZIARCE+50/u1di0ncebJ+CIwNOLswyOWzMTw=
+    dependencies:
+      - effect
+      - either
+      - maybe
+      - prelude
   exists:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-A0JQHpTfo1dNOj9U5/Fd3xndlRSE0g2IQWOGor2yXn8=
-      dependencies:
-        - unsafe-coerce
+    type: registry
+    version: 6.0.0
+    integrity: sha256-A0JQHpTfo1dNOj9U5/Fd3xndlRSE0g2IQWOGor2yXn8=
+    dependencies:
+      - unsafe-coerce
   foldable-traversable:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-fLeqRYM4jUrZD5H4WqcwUgzU7XfYkzO4zhgtNc3jcWM=
-      dependencies:
-        - bifunctors
-        - const
-        - control
-        - either
-        - functors
-        - identity
-        - maybe
-        - newtype
-        - orders
-        - prelude
-        - tuples
+    type: registry
+    version: 6.0.0
+    integrity: sha256-fLeqRYM4jUrZD5H4WqcwUgzU7XfYkzO4zhgtNc3jcWM=
+    dependencies:
+      - bifunctors
+      - const
+      - control
+      - either
+      - functors
+      - identity
+      - maybe
+      - newtype
+      - orders
+      - prelude
+      - tuples
   foreign:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 7.0.0
-      integrity: sha256-1ORiqoS3HW+qfwSZAppHPWy4/6AQysxZ2t29jcdUMNA=
-      dependencies:
-        - either
-        - functions
-        - identity
-        - integers
-        - lists
-        - maybe
-        - prelude
-        - strings
-        - transformers
+    type: registry
+    version: 7.0.0
+    integrity: sha256-1ORiqoS3HW+qfwSZAppHPWy4/6AQysxZ2t29jcdUMNA=
+    dependencies:
+      - either
+      - functions
+      - identity
+      - integers
+      - lists
+      - maybe
+      - prelude
+      - strings
+      - transformers
   foreign-object:
-    needed_by:
-      - 07-camel-cards
-    package:
-      type: registry
-      version: 4.1.0
-      integrity: sha256-q24okj6mT+yGHYQ+ei/pYPj5ih6sTbu7eDv/WU56JVo=
-      dependencies:
-        - arrays
-        - foldable-traversable
-        - functions
-        - gen
-        - lists
-        - maybe
-        - prelude
-        - st
-        - tailrec
-        - tuples
-        - typelevel-prelude
-        - unfoldable
+    type: registry
+    version: 4.1.0
+    integrity: sha256-q24okj6mT+yGHYQ+ei/pYPj5ih6sTbu7eDv/WU56JVo=
+    dependencies:
+      - arrays
+      - foldable-traversable
+      - functions
+      - gen
+      - lists
+      - maybe
+      - prelude
+      - st
+      - tailrec
+      - tuples
+      - typelevel-prelude
+      - unfoldable
   fork:
-    needed_by:
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-X7u0SuCvFbLbzuNEKLBNuWjmcroqMqit4xEzpQwAP7E=
-      dependencies:
-        - aff
+    type: registry
+    version: 6.0.0
+    integrity: sha256-X7u0SuCvFbLbzuNEKLBNuWjmcroqMqit4xEzpQwAP7E=
+    dependencies:
+      - aff
   free:
-    needed_by:
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-    package:
-      type: registry
-      version: 7.1.0
-      integrity: sha256-JAumgEsGSzJCNLD8AaFvuX7CpqS5yruCngi6yI7+V5k=
-      dependencies:
-        - catenable-lists
-        - control
-        - distributive
-        - either
-        - exists
-        - foldable-traversable
-        - invariant
-        - lazy
-        - maybe
-        - prelude
-        - tailrec
-        - transformers
-        - tuples
-        - unsafe-coerce
+    type: registry
+    version: 7.1.0
+    integrity: sha256-JAumgEsGSzJCNLD8AaFvuX7CpqS5yruCngi6yI7+V5k=
+    dependencies:
+      - catenable-lists
+      - control
+      - distributive
+      - either
+      - exists
+      - foldable-traversable
+      - invariant
+      - lazy
+      - maybe
+      - prelude
+      - tailrec
+      - transformers
+      - tuples
+      - unsafe-coerce
   functions:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-adMyJNEnhGde2unHHAP79gPtlNjNqzgLB8arEOn9hLI=
-      dependencies:
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-adMyJNEnhGde2unHHAP79gPtlNjNqzgLB8arEOn9hLI=
+    dependencies:
+      - prelude
   functors:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 5.0.0
-      integrity: sha256-zfPWWYisbD84MqwpJSZFlvM6v86McM68ob8p9s27ywU=
-      dependencies:
-        - bifunctors
-        - const
-        - contravariant
-        - control
-        - distributive
-        - either
-        - invariant
-        - maybe
-        - newtype
-        - prelude
-        - profunctor
-        - tuples
-        - unsafe-coerce
+    type: registry
+    version: 5.0.0
+    integrity: sha256-zfPWWYisbD84MqwpJSZFlvM6v86McM68ob8p9s27ywU=
+    dependencies:
+      - bifunctors
+      - const
+      - contravariant
+      - control
+      - distributive
+      - either
+      - invariant
+      - maybe
+      - newtype
+      - prelude
+      - profunctor
+      - tuples
+      - unsafe-coerce
   gen:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 4.0.0
-      integrity: sha256-f7yzAXWwr+xnaqEOcvyO3ezKdoes8+WXWdXIHDBCAPI=
-      dependencies:
-        - either
-        - foldable-traversable
-        - identity
-        - maybe
-        - newtype
-        - nonempty
-        - prelude
-        - tailrec
-        - tuples
-        - unfoldable
+    type: registry
+    version: 4.0.0
+    integrity: sha256-f7yzAXWwr+xnaqEOcvyO3ezKdoes8+WXWdXIHDBCAPI=
+    dependencies:
+      - either
+      - foldable-traversable
+      - identity
+      - maybe
+      - newtype
+      - nonempty
+      - prelude
+      - tailrec
+      - tuples
+      - unfoldable
   identity:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-4wY0XZbAksjY6UAg99WkuKyJlQlWAfTi2ssadH0wVMY=
-      dependencies:
-        - control
-        - invariant
-        - newtype
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-4wY0XZbAksjY6UAg99WkuKyJlQlWAfTi2ssadH0wVMY=
+    dependencies:
+      - control
+      - invariant
+      - newtype
+      - prelude
   integers:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-sf+sK26R1hzwl3NhXR7WAu9zCDjQnfoXwcyGoseX158=
-      dependencies:
-        - maybe
-        - numbers
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-sf+sK26R1hzwl3NhXR7WAu9zCDjQnfoXwcyGoseX158=
+    dependencies:
+      - maybe
+      - numbers
+      - prelude
   invariant:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-RGWWyYrz0Hs1KjPDA+87Kia67ZFBhfJ5lMGOMCEFoLo=
-      dependencies:
-        - control
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-RGWWyYrz0Hs1KjPDA+87Kia67ZFBhfJ5lMGOMCEFoLo=
+    dependencies:
+      - control
+      - prelude
   js-bigints:
-    needed_by:
-      - 08-haunted-wasteland
-    package:
-      type: registry
-      version: 2.2.1
-      integrity: sha256-hKWZo9NxtsAaHmNXr6B8GY4c0olQbYLXPVGWm4TF2Ss=
-      dependencies:
-        - integers
-        - maybe
-        - prelude
+    type: registry
+    version: 2.2.1
+    integrity: sha256-hKWZo9NxtsAaHmNXr6B8GY4c0olQbYLXPVGWm4TF2Ss=
+    dependencies:
+      - integers
+      - maybe
+      - prelude
   js-date:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 8.0.0
-      integrity: sha256-6TVF4DWg5JL+jRAsoMssYw8rgOVALMUHT1CuNZt8NRo=
-      dependencies:
-        - datetime
-        - effect
-        - exceptions
-        - foreign
-        - integers
-        - now
+    type: registry
+    version: 8.0.0
+    integrity: sha256-6TVF4DWg5JL+jRAsoMssYw8rgOVALMUHT1CuNZt8NRo=
+    dependencies:
+      - datetime
+      - effect
+      - exceptions
+      - foreign
+      - integers
+      - now
   lazy:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-lMsfFOnlqfe4KzRRiW8ot5ge6HtcU3Eyh2XkXcP5IgU=
-      dependencies:
-        - control
-        - foldable-traversable
-        - invariant
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-lMsfFOnlqfe4KzRRiW8ot5ge6HtcU3Eyh2XkXcP5IgU=
+    dependencies:
+      - control
+      - foldable-traversable
+      - invariant
+      - prelude
   lcg:
-    needed_by:
-      - 07-camel-cards
-      - 06-wait-for-it
-    package:
-      type: registry
-      version: 4.0.0
-      integrity: sha256-h7ME5cthLfbgJOJdsZcSfFpwXsx4rf8YmhebU+3iSYg=
-      dependencies:
-        - effect
-        - integers
-        - maybe
-        - partial
-        - prelude
-        - random
+    type: registry
+    version: 4.0.0
+    integrity: sha256-h7ME5cthLfbgJOJdsZcSfFpwXsx4rf8YmhebU+3iSYg=
+    dependencies:
+      - effect
+      - integers
+      - maybe
+      - partial
+      - prelude
+      - random
   lists:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 7.0.0
-      integrity: sha256-EKF15qYqucuXP2lT/xPxhqy58f0FFT6KHdIB/yBOayI=
-      dependencies:
-        - bifunctors
-        - control
-        - foldable-traversable
-        - lazy
-        - maybe
-        - newtype
-        - nonempty
-        - partial
-        - prelude
-        - tailrec
-        - tuples
-        - unfoldable
+    type: registry
+    version: 7.0.0
+    integrity: sha256-EKF15qYqucuXP2lT/xPxhqy58f0FFT6KHdIB/yBOayI=
+    dependencies:
+      - bifunctors
+      - control
+      - foldable-traversable
+      - lazy
+      - maybe
+      - newtype
+      - nonempty
+      - partial
+      - prelude
+      - tailrec
+      - tuples
+      - unfoldable
   matrices:
-    needed_by:
-      - 03-gear-ratios
-    package:
-      type: registry
-      version: 5.0.1
-      integrity: sha256-FnDEHKtgTlDijXjXW7R7w3gkLvdh0VV/agiokU4uuf8=
-      dependencies:
-        - arrays
-        - strings
+    type: registry
+    version: 5.0.1
+    integrity: sha256-FnDEHKtgTlDijXjXW7R7w3gkLvdh0VV/agiokU4uuf8=
+    dependencies:
+      - arrays
+      - strings
   maybe:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-5cCIb0wPwbat2PRkQhUeZO0jcAmf8jCt2qE0wbC3v2Q=
-      dependencies:
-        - control
-        - invariant
-        - newtype
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-5cCIb0wPwbat2PRkQhUeZO0jcAmf8jCt2qE0wbC3v2Q=
+    dependencies:
+      - control
+      - invariant
+      - newtype
+      - prelude
   mmorph:
-    needed_by:
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-    package:
-      type: registry
-      version: 7.0.0
-      integrity: sha256-urZlZNNqGeQFe5D/ClHlR8QgGBNHTMFPtJ5S5IpflTQ=
-      dependencies:
-        - free
-        - functors
-        - transformers
+    type: registry
+    version: 7.0.0
+    integrity: sha256-urZlZNNqGeQFe5D/ClHlR8QgGBNHTMFPtJ5S5IpflTQ=
+    dependencies:
+      - free
+      - functors
+      - transformers
   newtype:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 5.0.0
-      integrity: sha256-gdrQu8oGe9eZE6L3wOI8ql/igOg+zEGB5ITh2g+uttw=
-      dependencies:
-        - prelude
-        - safe-coerce
+    type: registry
+    version: 5.0.0
+    integrity: sha256-gdrQu8oGe9eZE6L3wOI8ql/igOg+zEGB5ITh2g+uttw=
+    dependencies:
+      - prelude
+      - safe-coerce
   node-buffer:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 9.0.0
-      integrity: sha256-PWE2DJ5ruBLCmeA/fUiuySEFmUJ/VuRfyrnCuVZBlu4=
-      dependencies:
-        - arraybuffer-types
-        - effect
-        - maybe
-        - nullable
-        - st
-        - unsafe-coerce
+    type: registry
+    version: 9.0.0
+    integrity: sha256-PWE2DJ5ruBLCmeA/fUiuySEFmUJ/VuRfyrnCuVZBlu4=
+    dependencies:
+      - arraybuffer-types
+      - effect
+      - maybe
+      - nullable
+      - st
+      - unsafe-coerce
   node-event-emitter:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 3.0.0
-      integrity: sha256-Qw0MjsT4xRH2j2i4K8JmRjcMKnH5z1Cw39t00q4LE4w=
-      dependencies:
-        - effect
-        - either
-        - functions
-        - maybe
-        - nullable
-        - prelude
-        - unsafe-coerce
+    type: registry
+    version: 3.0.0
+    integrity: sha256-Qw0MjsT4xRH2j2i4K8JmRjcMKnH5z1Cw39t00q4LE4w=
+    dependencies:
+      - effect
+      - either
+      - functions
+      - maybe
+      - nullable
+      - prelude
+      - unsafe-coerce
   node-fs:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 9.1.0
-      integrity: sha256-TzhvGdrwcM0bazDvrWSqh+M/H8GKYf1Na6aGm2Qg4+c=
-      dependencies:
-        - datetime
-        - effect
-        - either
-        - enums
-        - exceptions
-        - functions
-        - integers
-        - js-date
-        - maybe
-        - node-buffer
-        - node-path
-        - node-streams
-        - nullable
-        - partial
-        - prelude
-        - strings
-        - unsafe-coerce
+    type: registry
+    version: 9.1.0
+    integrity: sha256-TzhvGdrwcM0bazDvrWSqh+M/H8GKYf1Na6aGm2Qg4+c=
+    dependencies:
+      - datetime
+      - effect
+      - either
+      - enums
+      - exceptions
+      - functions
+      - integers
+      - js-date
+      - maybe
+      - node-buffer
+      - node-path
+      - node-streams
+      - nullable
+      - partial
+      - prelude
+      - strings
+      - unsafe-coerce
   node-path:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 5.0.0
-      integrity: sha256-pd82nQ+2l5UThzaxPdKttgDt7xlsgIDLpPG0yxDEdyE=
-      dependencies:
-        - effect
+    type: registry
+    version: 5.0.0
+    integrity: sha256-pd82nQ+2l5UThzaxPdKttgDt7xlsgIDLpPG0yxDEdyE=
+    dependencies:
+      - effect
   node-streams:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 9.0.0
-      integrity: sha256-2n6dq7YWleTDmD1Kur/ul7Cn08IvWrScgPf+0PgX2TQ=
-      dependencies:
-        - aff
-        - effect
-        - either
-        - exceptions
-        - node-buffer
-        - node-event-emitter
-        - nullable
-        - prelude
+    type: registry
+    version: 9.0.0
+    integrity: sha256-2n6dq7YWleTDmD1Kur/ul7Cn08IvWrScgPf+0PgX2TQ=
+    dependencies:
+      - aff
+      - effect
+      - either
+      - exceptions
+      - node-buffer
+      - node-event-emitter
+      - nullable
+      - prelude
   nonempty:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 7.0.0
-      integrity: sha256-54ablJZUHGvvlTJzi3oXyPCuvY6zsrWJuH/dMJ/MFLs=
-      dependencies:
-        - control
-        - foldable-traversable
-        - maybe
-        - prelude
-        - tuples
-        - unfoldable
+    type: registry
+    version: 7.0.0
+    integrity: sha256-54ablJZUHGvvlTJzi3oXyPCuvY6zsrWJuH/dMJ/MFLs=
+    dependencies:
+      - control
+      - foldable-traversable
+      - maybe
+      - prelude
+      - tuples
+      - unfoldable
   now:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-xZ7x37ZMREfs6GCDw/h+FaKHV/3sPWmtqBZRGTxybQY=
-      dependencies:
-        - datetime
-        - effect
+    type: registry
+    version: 6.0.0
+    integrity: sha256-xZ7x37ZMREfs6GCDw/h+FaKHV/3sPWmtqBZRGTxybQY=
+    dependencies:
+      - datetime
+      - effect
   nullable:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-yiGBVl3AD+Guy4kNWWeN+zl1gCiJK+oeIFtZtPCw4+o=
-      dependencies:
-        - effect
-        - functions
-        - maybe
+    type: registry
+    version: 6.0.0
+    integrity: sha256-yiGBVl3AD+Guy4kNWWeN+zl1gCiJK+oeIFtZtPCw4+o=
+    dependencies:
+      - effect
+      - functions
+      - maybe
   numbers:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 9.0.1
-      integrity: sha256-/9M6aeMDBdB4cwYDeJvLFprAHZ49EbtKQLIJsneXLIk=
-      dependencies:
-        - functions
-        - maybe
+    type: registry
+    version: 9.0.1
+    integrity: sha256-/9M6aeMDBdB4cwYDeJvLFprAHZ49EbtKQLIJsneXLIk=
+    dependencies:
+      - functions
+      - maybe
   ordered-collections:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 3.1.1
-      integrity: sha256-boSYHmlz4aSbwsNN4VxiwCStc0t+y1F7BXmBS+1JNtI=
-      dependencies:
-        - arrays
-        - foldable-traversable
-        - gen
-        - lists
-        - maybe
-        - partial
-        - prelude
-        - st
-        - tailrec
-        - tuples
-        - unfoldable
+    type: registry
+    version: 3.1.1
+    integrity: sha256-boSYHmlz4aSbwsNN4VxiwCStc0t+y1F7BXmBS+1JNtI=
+    dependencies:
+      - arrays
+      - foldable-traversable
+      - gen
+      - lists
+      - maybe
+      - partial
+      - prelude
+      - st
+      - tailrec
+      - tuples
+      - unfoldable
   orders:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-nBA0g3/ai0euH8q9pSbGqk53W2q6agm/dECZTHcoink=
-      dependencies:
-        - newtype
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-nBA0g3/ai0euH8q9pSbGqk53W2q6agm/dECZTHcoink=
+    dependencies:
+      - newtype
+      - prelude
   parallel:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 7.0.0
-      integrity: sha256-gUC9i4Txnx9K9RcMLsjujbwZz6BB1bnE2MLvw4GIw5o=
-      dependencies:
-        - control
-        - effect
-        - either
-        - foldable-traversable
-        - functors
-        - maybe
-        - newtype
-        - prelude
-        - profunctor
-        - refs
-        - transformers
+    type: registry
+    version: 7.0.0
+    integrity: sha256-gUC9i4Txnx9K9RcMLsjujbwZz6BB1bnE2MLvw4GIw5o=
+    dependencies:
+      - control
+      - effect
+      - either
+      - foldable-traversable
+      - functors
+      - maybe
+      - newtype
+      - prelude
+      - profunctor
+      - refs
+      - transformers
   parsing:
-    needed_by:
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 10.2.0
-      integrity: sha256-ZDIdMFAKkst57x6BVa1aUWJnS8smoZnXsZ339Aq1mPA=
-      dependencies:
-        - arrays
-        - control
-        - effect
-        - either
-        - enums
-        - foldable-traversable
-        - functions
-        - identity
-        - integers
-        - lazy
-        - lists
-        - maybe
-        - newtype
-        - nullable
-        - numbers
-        - partial
-        - prelude
-        - st
-        - strings
-        - tailrec
-        - transformers
-        - tuples
-        - unfoldable
-        - unicode
-        - unsafe-coerce
+    type: registry
+    version: 10.2.0
+    integrity: sha256-ZDIdMFAKkst57x6BVa1aUWJnS8smoZnXsZ339Aq1mPA=
+    dependencies:
+      - arrays
+      - control
+      - effect
+      - either
+      - enums
+      - foldable-traversable
+      - functions
+      - identity
+      - integers
+      - lazy
+      - lists
+      - maybe
+      - newtype
+      - nullable
+      - numbers
+      - partial
+      - prelude
+      - st
+      - strings
+      - tailrec
+      - transformers
+      - tuples
+      - unfoldable
+      - unicode
+      - unsafe-coerce
   partial:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 4.0.0
-      integrity: sha256-fwXerld6Xw1VkReh8yeQsdtLVrjfGiVuC5bA1Wyo/J4=
-      dependencies: []
+    type: registry
+    version: 4.0.0
+    integrity: sha256-fwXerld6Xw1VkReh8yeQsdtLVrjfGiVuC5bA1Wyo/J4=
+    dependencies: []
   pipes:
-    needed_by:
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-    package:
-      type: registry
-      version: 8.0.0
-      integrity: sha256-kvfqGM4cPA/wCcBHbp5psouFw5dZGvku2462x7ZBwSY=
-      dependencies:
-        - aff
-        - lists
-        - mmorph
-        - prelude
-        - tailrec
-        - transformers
-        - tuples
+    type: registry
+    version: 8.0.0
+    integrity: sha256-kvfqGM4cPA/wCcBHbp5psouFw5dZGvku2462x7ZBwSY=
+    dependencies:
+      - aff
+      - lists
+      - mmorph
+      - prelude
+      - tailrec
+      - transformers
+      - tuples
   prelude:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.1
-      integrity: sha256-o8p6SLYmVPqzXZhQFd2hGAWEwBoXl1swxLG/scpJ0V0=
-      dependencies: []
+    type: registry
+    version: 6.0.1
+    integrity: sha256-o8p6SLYmVPqzXZhQFd2hGAWEwBoXl1swxLG/scpJ0V0=
+    dependencies: []
   profunctor:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-99NzxFgTr4CGlCSRYG1kShL+JhYbihhHtbOk1/0R5zI=
-      dependencies:
-        - control
-        - distributive
-        - either
-        - exists
-        - invariant
-        - newtype
-        - prelude
-        - tuples
+    type: registry
+    version: 6.0.0
+    integrity: sha256-99NzxFgTr4CGlCSRYG1kShL+JhYbihhHtbOk1/0R5zI=
+    dependencies:
+      - control
+      - distributive
+      - either
+      - exists
+      - invariant
+      - newtype
+      - prelude
+      - tuples
   profunctor-lenses:
-    needed_by:
-      - 07-camel-cards
-    package:
-      type: registry
-      version: 8.0.0
-      integrity: sha256-K7f29rHRHgVSb2Y/PaSKtfYPriP6n87BJNO7EhsZHas=
-      dependencies:
-        - arrays
-        - bifunctors
-        - const
-        - control
-        - distributive
-        - either
-        - foldable-traversable
-        - foreign-object
-        - functors
-        - identity
-        - lists
-        - maybe
-        - newtype
-        - ordered-collections
-        - partial
-        - prelude
-        - profunctor
-        - record
-        - transformers
-        - tuples
+    type: registry
+    version: 8.0.0
+    integrity: sha256-K7f29rHRHgVSb2Y/PaSKtfYPriP6n87BJNO7EhsZHas=
+    dependencies:
+      - arrays
+      - bifunctors
+      - const
+      - control
+      - distributive
+      - either
+      - foldable-traversable
+      - foreign-object
+      - functors
+      - identity
+      - lists
+      - maybe
+      - newtype
+      - ordered-collections
+      - partial
+      - prelude
+      - profunctor
+      - record
+      - transformers
+      - tuples
   quickcheck:
-    needed_by:
-      - 07-camel-cards
-      - 06-wait-for-it
-    package:
-      type: registry
-      version: 8.0.1
-      integrity: sha256-ZvpccKQCvgslTXZCNmpYW4bUsFzhZd/kQUr2WmxFTGY=
-      dependencies:
-        - arrays
-        - console
-        - control
-        - effect
-        - either
-        - enums
-        - exceptions
-        - foldable-traversable
-        - gen
-        - identity
-        - integers
-        - lazy
-        - lcg
-        - lists
-        - maybe
-        - newtype
-        - nonempty
-        - numbers
-        - partial
-        - prelude
-        - record
-        - st
-        - strings
-        - tailrec
-        - transformers
-        - tuples
-        - unfoldable
+    type: registry
+    version: 8.0.1
+    integrity: sha256-ZvpccKQCvgslTXZCNmpYW4bUsFzhZd/kQUr2WmxFTGY=
+    dependencies:
+      - arrays
+      - console
+      - control
+      - effect
+      - either
+      - enums
+      - exceptions
+      - foldable-traversable
+      - gen
+      - identity
+      - integers
+      - lazy
+      - lcg
+      - lists
+      - maybe
+      - newtype
+      - nonempty
+      - numbers
+      - partial
+      - prelude
+      - record
+      - st
+      - strings
+      - tailrec
+      - transformers
+      - tuples
+      - unfoldable
   quickcheck-laws:
-    needed_by:
-      - 06-wait-for-it
-    package:
-      type: registry
-      version: 7.0.0
-      integrity: sha256-rnzVTiDnymzYkvnhI8EvPwrmO8LgcTnrMTuiI172Tkc=
-      dependencies:
-        - enums
-        - quickcheck
+    type: registry
+    version: 7.0.0
+    integrity: sha256-rnzVTiDnymzYkvnhI8EvPwrmO8LgcTnrMTuiI172Tkc=
+    dependencies:
+      - enums
+      - quickcheck
   random:
-    needed_by:
-      - 07-camel-cards
-      - 06-wait-for-it
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-CJ611a35MPCE7XQMp0rdC6MCn76znlhisiCRgboAG+Q=
-      dependencies:
-        - effect
-        - integers
+    type: registry
+    version: 6.0.0
+    integrity: sha256-CJ611a35MPCE7XQMp0rdC6MCn76znlhisiCRgboAG+Q=
+    dependencies:
+      - effect
+      - integers
   record:
-    needed_by:
-      - 07-camel-cards
-      - 06-wait-for-it
-    package:
-      type: registry
-      version: 4.0.0
-      integrity: sha256-Za5U85bTRJEfGK5Sk4hM41oXy84YQI0I8TL3WUn1Qzg=
-      dependencies:
-        - functions
-        - prelude
-        - unsafe-coerce
+    type: registry
+    version: 4.0.0
+    integrity: sha256-Za5U85bTRJEfGK5Sk4hM41oXy84YQI0I8TL3WUn1Qzg=
+    dependencies:
+      - functions
+      - prelude
+      - unsafe-coerce
   refs:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-Vgwne7jIbD3ZMoLNNETLT8Litw6lIYo3MfYNdtYWj9s=
-      dependencies:
-        - effect
-        - prelude
+    type: registry
+    version: 6.0.0
+    integrity: sha256-Vgwne7jIbD3ZMoLNNETLT8Litw6lIYo3MfYNdtYWj9s=
+    dependencies:
+      - effect
+      - prelude
   safe-coerce:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 2.0.0
-      integrity: sha256-a1ibQkiUcbODbLE/WAq7Ttbbh9ex+x33VCQ7GngKudU=
-      dependencies:
-        - unsafe-coerce
+    type: registry
+    version: 2.0.0
+    integrity: sha256-a1ibQkiUcbODbLE/WAq7Ttbbh9ex+x33VCQ7GngKudU=
+    dependencies:
+      - unsafe-coerce
   sized-vectors:
-    needed_by:
-      - 07-camel-cards
-    package:
-      type: registry
-      version: 5.0.2
-      integrity: sha256-L7gThpeZqzYA41xs94DegbWS3Mzpp5u9/tABIaHmIcs=
-      dependencies:
-        - argonaut
-        - arrays
-        - distributive
-        - foldable-traversable
-        - maybe
-        - prelude
-        - quickcheck
-        - typelevel
-        - unfoldable
+    type: registry
+    version: 5.0.2
+    integrity: sha256-L7gThpeZqzYA41xs94DegbWS3Mzpp5u9/tABIaHmIcs=
+    dependencies:
+      - argonaut
+      - arrays
+      - distributive
+      - foldable-traversable
+      - maybe
+      - prelude
+      - quickcheck
+      - typelevel
+      - unfoldable
   spec:
-    needed_by:
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-    package:
-      type: registry
-      version: 7.5.5
-      integrity: sha256-HdyBH7Ys1/m2SdTq3u2u9LdQ4cGeaohWeEMYay2mHdU=
-      dependencies:
-        - aff
-        - ansi
-        - arrays
-        - avar
-        - bifunctors
-        - control
-        - datetime
-        - debug
-        - effect
-        - either
-        - exceptions
-        - foldable-traversable
-        - fork
-        - identity
-        - integers
-        - lists
-        - maybe
-        - newtype
-        - now
-        - ordered-collections
-        - parallel
-        - pipes
-        - prelude
-        - refs
-        - strings
-        - tailrec
-        - transformers
-        - tuples
+    type: registry
+    version: 7.5.5
+    integrity: sha256-HdyBH7Ys1/m2SdTq3u2u9LdQ4cGeaohWeEMYay2mHdU=
+    dependencies:
+      - aff
+      - ansi
+      - arrays
+      - avar
+      - bifunctors
+      - control
+      - datetime
+      - debug
+      - effect
+      - either
+      - exceptions
+      - foldable-traversable
+      - fork
+      - identity
+      - integers
+      - lists
+      - maybe
+      - newtype
+      - now
+      - ordered-collections
+      - parallel
+      - pipes
+      - prelude
+      - refs
+      - strings
+      - tailrec
+      - transformers
+      - tuples
   st:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.2.0
-      integrity: sha256-z9X0WsOUlPwNx9GlCC+YccCyz8MejC8Wb0C4+9fiBRY=
-      dependencies:
-        - partial
-        - prelude
-        - tailrec
-        - unsafe-coerce
+    type: registry
+    version: 6.2.0
+    integrity: sha256-z9X0WsOUlPwNx9GlCC+YccCyz8MejC8Wb0C4+9fiBRY=
+    dependencies:
+      - partial
+      - prelude
+      - tailrec
+      - unsafe-coerce
   strings:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.1
-      integrity: sha256-WssD3DbX4OPzxSdjvRMX0yvc9+pS7n5gyPv5I2Trb7k=
-      dependencies:
-        - arrays
-        - control
-        - either
-        - enums
-        - foldable-traversable
-        - gen
-        - integers
-        - maybe
-        - newtype
-        - nonempty
-        - partial
-        - prelude
-        - tailrec
-        - tuples
-        - unfoldable
-        - unsafe-coerce
+    type: registry
+    version: 6.0.1
+    integrity: sha256-WssD3DbX4OPzxSdjvRMX0yvc9+pS7n5gyPv5I2Trb7k=
+    dependencies:
+      - arrays
+      - control
+      - either
+      - enums
+      - foldable-traversable
+      - gen
+      - integers
+      - maybe
+      - newtype
+      - nonempty
+      - partial
+      - prelude
+      - tailrec
+      - tuples
+      - unfoldable
+      - unsafe-coerce
   stringutils:
-    needed_by:
-      - 08-haunted-wasteland
-    package:
-      type: registry
-      version: 0.0.12
-      integrity: sha256-t63QWBlp49U0nRqUcFryKflSJsNKGTQAHKjn24/+ooI=
-      dependencies:
-        - arrays
-        - integers
-        - maybe
-        - partial
-        - prelude
-        - strings
+    type: registry
+    version: 0.0.12
+    integrity: sha256-t63QWBlp49U0nRqUcFryKflSJsNKGTQAHKjn24/+ooI=
+    dependencies:
+      - arrays
+      - integers
+      - maybe
+      - partial
+      - prelude
+      - strings
   tailrec:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.1.0
-      integrity: sha256-Xx19ECVDRrDWpz9D2GxQHHV89vd61dnXxQm0IcYQHGk=
-      dependencies:
-        - bifunctors
-        - effect
-        - either
-        - identity
-        - maybe
-        - partial
-        - prelude
-        - refs
+    type: registry
+    version: 6.1.0
+    integrity: sha256-Xx19ECVDRrDWpz9D2GxQHHV89vd61dnXxQm0IcYQHGk=
+    dependencies:
+      - bifunctors
+      - effect
+      - either
+      - identity
+      - maybe
+      - partial
+      - prelude
+      - refs
   transformers:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-Pzw40HjthX77tdPAYzjx43LK3X5Bb7ZspYAp27wksFA=
-      dependencies:
-        - control
-        - distributive
-        - effect
-        - either
-        - exceptions
-        - foldable-traversable
-        - identity
-        - lazy
-        - maybe
-        - newtype
-        - prelude
-        - tailrec
-        - tuples
-        - unfoldable
+    type: registry
+    version: 6.0.0
+    integrity: sha256-Pzw40HjthX77tdPAYzjx43LK3X5Bb7ZspYAp27wksFA=
+    dependencies:
+      - control
+      - distributive
+      - effect
+      - either
+      - exceptions
+      - foldable-traversable
+      - identity
+      - lazy
+      - maybe
+      - newtype
+      - prelude
+      - tailrec
+      - tuples
+      - unfoldable
   tuples:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 7.0.0
-      integrity: sha256-1rXgTomes9105BjgXqIw0FL6Fz1lqqUTLWOumhWec1M=
-      dependencies:
-        - control
-        - invariant
-        - prelude
+    type: registry
+    version: 7.0.0
+    integrity: sha256-1rXgTomes9105BjgXqIw0FL6Fz1lqqUTLWOumhWec1M=
+    dependencies:
+      - control
+      - invariant
+      - prelude
   type-equality:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 4.0.1
-      integrity: sha256-Hs9D6Y71zFi/b+qu5NSbuadUQXe5iv5iWx0226vOHUw=
-      dependencies: []
+    type: registry
+    version: 4.0.1
+    integrity: sha256-Hs9D6Y71zFi/b+qu5NSbuadUQXe5iv5iWx0226vOHUw=
+    dependencies: []
   typelevel:
-    needed_by:
-      - 07-camel-cards
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-Iu7INcwTC/SbKcienMe7KKQvWku2VhCZSGCvrQWVVoc=
-      dependencies:
-        - partial
-        - prelude
-        - tuples
-        - typelevel-prelude
-        - unsafe-coerce
+    type: registry
+    version: 6.0.0
+    integrity: sha256-Iu7INcwTC/SbKcienMe7KKQvWku2VhCZSGCvrQWVVoc=
+    dependencies:
+      - partial
+      - prelude
+      - tuples
+      - typelevel-prelude
+      - unsafe-coerce
   typelevel-prelude:
-    needed_by:
-      - 07-camel-cards
-    package:
-      type: registry
-      version: 7.0.0
-      integrity: sha256-uFF2ph+vHcQpfPuPf2a3ukJDFmLhApmkpTMviHIWgJM=
-      dependencies:
-        - prelude
-        - type-equality
+    type: registry
+    version: 7.0.0
+    integrity: sha256-uFF2ph+vHcQpfPuPf2a3ukJDFmLhApmkpTMviHIWgJM=
+    dependencies:
+      - prelude
+      - type-equality
   unfoldable:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-JtikvJdktRap7vr/K4ITlxUX1QexpnqBq0G/InLr6eg=
-      dependencies:
-        - foldable-traversable
-        - maybe
-        - partial
-        - prelude
-        - tuples
+    type: registry
+    version: 6.0.0
+    integrity: sha256-JtikvJdktRap7vr/K4ITlxUX1QexpnqBq0G/InLr6eg=
+    dependencies:
+      - foldable-traversable
+      - maybe
+      - partial
+      - prelude
+      - tuples
   unicode:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-QJnTVZpmihEAUiMeYrfkusVoziJWp2hJsgi9bMQLue8=
-      dependencies:
-        - foldable-traversable
-        - maybe
-        - strings
+    type: registry
+    version: 6.0.0
+    integrity: sha256-QJnTVZpmihEAUiMeYrfkusVoziJWp2hJsgi9bMQLue8=
+    dependencies:
+      - foldable-traversable
+      - maybe
+      - strings
   unsafe-coerce:
-    needed_by:
-      - utils
-      - template
-      - 10-pipe-maze
-      - 09-mirage-maintenance
-      - 08-haunted-wasteland
-      - 07-camel-cards
-      - 06-wait-for-it
-      - 05-seeds
-      - 04-scratchcards
-      - 03-gear-ratios
-      - 02-cube-conundrum
-      - 01-trebuchet
-    package:
-      type: registry
-      version: 6.0.0
-      integrity: sha256-IqIYW4Vkevn8sI+6aUwRGvd87tVL36BBeOr0cGAE7t0=
-      dependencies: []
+    type: registry
+    version: 6.0.0
+    integrity: sha256-IqIYW4Vkevn8sI+6aUwRGvd87tVL36BBeOr0cGAE7t0=
+    dependencies: []

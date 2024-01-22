@@ -6,3 +6,4 @@ package:
     - prelude
     - unicode
     - node-fs
+    - parsing

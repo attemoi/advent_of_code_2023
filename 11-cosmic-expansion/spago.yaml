@@ -1,0 +1,11 @@
+package:
+  name: 11-cosmic-expansion
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - utils
+    - parsing
+  test:
+    main: Test.Main
+    dependencies: []
