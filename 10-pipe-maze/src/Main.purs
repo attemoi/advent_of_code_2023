@@ -3,13 +3,11 @@ module Main where
 import Prelude
 import Control.Alt ((<|>))
 import Data.Array as Array
-import Data.Either (hush)
 import Data.Foldable (sum)
-import Data.List (List(..), catMaybes, filter, fromFoldable, head, (:))
-import Data.List.NonEmpty (toList)
+import Data.List (List(..), filter, fromFoldable, head, (:))
 import Data.Map (Map, lookup)
 import Data.Map as Map
-import Data.Maybe (Maybe(..), fromMaybe)
+import Data.Maybe (Maybe(..))
 import Data.Set (toUnfoldable)
 import Data.Set as Set
 import Data.Tuple (Tuple, fst, snd)
@@ -17,10 +15,8 @@ import Data.Tuple.Nested ((/\))
 import Effect (Effect)
 import Effect.Console (log)
 import Parsing (Parser)
-import Parsing as Parsing
 import Parsing.String (string)
-import Parsing.String.Replace (splitCap)
-import Utils (column, line, readFile)
+import Utils (Coords, parseGrid, readFile)
 
 data Direction
   = North
@@ -29,9 +25,6 @@ data Direction
   | West
 
 derive instance eqDirection :: Eq Direction
-
-type Position
-  = { x :: Int, y :: Int }
 
 opposite :: Direction -> Direction
 opposite North = South
@@ -42,7 +35,7 @@ opposite West = East
 
 opposite East = West
 
-move :: Position -> Direction -> Position
+move :: Coords -> Direction -> Coords
 move pos North = pos { y = pos.y - 1 }
 
 move pos South = pos { y = pos.y + 1 }
@@ -55,7 +48,7 @@ type Pipe
   = Tuple Direction Direction
 
 type PipeMap
-  = Map Position Pipe
+  = Map Coords Pipe
 
 main :: Effect Unit
 main = do
@@ -63,23 +56,23 @@ main = do
   let
     pipeMap = parsePipes input
 
-    startPosition = findStartPosition input
+    startCoords = findStartCoords input
 
-    startPipe = findStartPipe startPosition pipeMap
+    startPipe = findStartPipe startCoords pipeMap
 
-    pipesInLoop = traversePipeline startPosition startPipe pipeMap
+    pipesInLoop = traversePipeline startCoords startPipe pipeMap
   log $ show $ "Part 1, steps to furthest point in pipeline: "
     <> (show $ Map.size pipesInLoop / 2)
   log $ show $ "Part 2, number of enclosed tiles: "
     <> (show $ enclosedTiles pipesInLoop)
 
-findStartPosition :: String -> Position
-findStartPosition input =
-  fromMaybe { x: 0, y: 0 } $ head $ catMaybes $ toList $ hush
-    <$> splitCap input startPositionParser
+findStartCoords :: String -> Coords
+findStartCoords input = case head $ parseGrid input (string "S") of
+  Nothing -> { x: 0, y: 0 }
+  Just (coords /\ _) -> coords
 
-findStartPipe :: Position -> PipeMap -> Pipe
-findStartPipe startPosition pipeMap = case filter (connectsToDir startPosition) (North : East : South : West : Nil) of
+findStartPipe :: Coords -> PipeMap -> Pipe
+findStartPipe startCoords pipeMap = case filter (connectsToDir startCoords) (North : East : South : West : Nil) of
   a : b : _ -> a /\ b
   _ -> North /\ South -- This shouldn't happen
   where
@@ -88,7 +81,7 @@ findStartPipe startPosition pipeMap = case filter (connectsToDir startPosition) 
     Just pipe -> (fst pipe == opposite dir) || (snd pipe == opposite dir)
 
 parsePipes :: String -> PipeMap
-parsePipes input = Map.fromFoldable $ catMaybes $ toList $ hush <$> splitCap input tileParser
+parsePipes input = Map.fromFoldable $ parseGrid input tileParser
 
 enclosedTiles :: PipeMap -> Int
 enclosedTiles pipes = pointsInPolygon pipes
@@ -96,9 +89,9 @@ enclosedTiles pipes = pointsInPolygon pipes
 pointsInPolygon :: PipeMap -> Int
 pointsInPolygon pipeMap = sum $ map pointsInRow rows
   where
-  northConnectingPipePositions = Map.keys $ Map.filter connectsNorth pipeMap
+  northConnectingPipeCoords = Map.keys $ Map.filter connectsNorth pipeMap
 
-  rows = map fromFoldable $ Array.groupAllBy (comparing _.y) $ toUnfoldable northConnectingPipePositions
+  rows = map fromFoldable $ Array.groupAllBy (comparing _.y) $ toUnfoldable northConnectingPipeCoords
 
   pointsInRow (a : b : xs) = b.x - a.x - 1 - (numPipesBetween a b) + (pointsInRow xs)
 
@@ -113,20 +106,20 @@ pointsInPolygon pipeMap = sum $ map pointsInRow rows
 connectsNorth :: Pipe -> Boolean
 connectsNorth (a /\ b) = a == North || b == North
 
-traversePipeline :: Position -> Pipe -> PipeMap -> PipeMap
-traversePipeline startPosition startPipe allPipes = go Map.empty startPosition startPipe (fst startPipe)
+traversePipeline :: Coords -> Pipe -> PipeMap -> PipeMap
+traversePipeline startCoord startPipe allPipes = go Map.empty startCoord startPipe (fst startPipe)
   where
   go acc position pipe fromDir =
     let
       outDir = otherEndDir pipe fromDir
 
-      nextPosition = (move position outDir)
+      nextCoord = (move position outDir)
 
-      nextPipe = lookup nextPosition allPipes
+      nextPipe = lookup nextCoord allPipes
     in
       case nextPipe of
         Nothing -> Map.insert position pipe acc
-        (Just p) -> go (Map.insert position pipe acc) nextPosition p (opposite outDir)
+        (Just p) -> go (Map.insert position pipe acc) nextCoord p (opposite outDir)
 
 otherEndDir :: Pipe -> Direction -> Direction
 otherEndDir pipe direction
@@ -134,20 +127,11 @@ otherEndDir pipe direction
   | snd pipe == direction = fst pipe
   | otherwise = snd pipe
 
-startPositionParser :: Parser String Position
-startPositionParser = do
-  pos <- Parsing.position
-  _ <- string "S"
-  pure ({ x: column pos, y: line pos })
-
-tileParser :: Parser String (Tuple Position Pipe)
-tileParser = do
-  position <- Parsing.position
-  directions <-
-    (string "|" $> North /\ South)
-      <|> (string "-" $> East /\ West)
-      <|> (string "L" $> North /\ East)
-      <|> (string "J" $> North /\ West)
-      <|> (string "7" $> South /\ West)
-      <|> (string "F" $> South /\ East)
-  pure ({ x: column position, y: line position } /\ directions)
+tileParser :: Parser String Pipe
+tileParser =
+  (string "|" $> North /\ South)
+    <|> (string "-" $> East /\ West)
+    <|> (string "L" $> North /\ East)
+    <|> (string "J" $> North /\ West)
+    <|> (string "7" $> South /\ West)
+    <|> (string "F" $> South /\ East)

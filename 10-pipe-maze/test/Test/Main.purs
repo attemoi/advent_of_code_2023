@@ -3,7 +3,7 @@ module Test.Main where
 import Prelude
 import Effect (Effect)
 import Effect.Aff (launchAff_)
-import Main (enclosedTiles, findStartPipe, findStartPosition, parsePipes, traversePipeline)
+import Main (enclosedTiles, findStartPipe, findStartCoords, parsePipes, traversePipeline)
 import Test.Spec (describe, it)
 import Test.Spec.Assertions (shouldEqual)
 import Test.Spec.Reporter.Console (consoleReporter)
@@ -31,11 +31,11 @@ main =
 
               allPipes = parsePipes input
 
-              startPosition = findStartPosition input
+              startCoords = findStartCoords input
 
-              startPipe = findStartPipe startPosition allPipes
+              startPipe = findStartPipe startCoords allPipes
 
-              pipesInLoop = traversePipeline startPosition startPipe allPipes
+              pipesInLoop = traversePipeline startCoords startPipe allPipes
             enclosedTiles pipesInLoop `shouldEqual` 4
           it "Enclosed tiles, complex case" do
             let
@@ -55,9 +55,9 @@ main =
 
               allPipes = parsePipes input
 
-              startPosition = findStartPosition input
+              startCoords = findStartCoords input
 
-              startPipe = findStartPipe startPosition allPipes
+              startPipe = findStartPipe startCoords allPipes
 
-              pipesInLoop = traversePipeline startPosition startPipe allPipes
+              pipesInLoop = traversePipeline startCoords startPipe allPipes
             enclosedTiles pipesInLoop `shouldEqual` 10
