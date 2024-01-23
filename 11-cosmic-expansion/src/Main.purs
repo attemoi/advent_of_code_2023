@@ -3,6 +3,7 @@ module Main where
 import Prelude
 import Control.Alternative (guard)
 import Data.Foldable (maximum, minimum, sum)
+import Data.Int (toNumber)
 import Data.List (range)
 import Data.List as List
 import Data.Maybe (fromMaybe)
@@ -32,11 +33,13 @@ main = do
   let
     galaxies = parseGalaxies input
 
-    expandedGalaxies = expandUniverse galaxies
+    expandedGalaxiesPart1 = expandUniverse galaxies 2
 
-    galaxyPairs = uniquePairs expandedGalaxies
-  log $ show $ "Part1 (sum of shortest paths): "
-    <> (show $ sum $ map pathLength $ List.fromFoldable $ galaxyPairs)
+    expandedGalaxiesPart2 = expandUniverse galaxies 1_000_000
+  log $ show $ "Part 1 (sum of shortest paths): "
+    <> (show $ sum $ map pathLength $ List.fromFoldable $ uniquePairs expandedGalaxiesPart1)
+  log $ show $ "Part 2 (more expansion): "
+    <> (show $ sum $ map toNumber $ map pathLength $ List.fromFoldable $ uniquePairs expandedGalaxiesPart2)
 
 pathLength :: Tuple Coords Coords -> Int
 pathLength (a /\ b) = (abs (b.y - a.y)) + (abs (b.x - a.x))
@@ -58,8 +61,8 @@ getBounds galaxies =
   , maxY: fromMaybe 0 $ maximum $ Set.map _.y $ galaxies
   }
 
-expandUniverse :: Galaxies -> Galaxies
-expandUniverse galaxies = Set.map (expandGalaxy emptyRows emptyColumns) galaxies
+expandUniverse :: Galaxies -> Int -> Galaxies
+expandUniverse galaxies expansion = Set.map expandGalaxy galaxies
   where
   bounds = getBounds galaxies
 
@@ -75,15 +78,14 @@ expandUniverse galaxies = Set.map (expandGalaxy emptyRows emptyColumns) galaxies
 
     columnsWithGalaxies = Set.map _.x $ galaxies
 
-expandGalaxy :: Set Int -> Set Int -> Coords -> Coords
-expandGalaxy emptyRows emptyColumns galaxyCoords =
-  { x: galaxyCoords.x + columnExpansion
-  , y: galaxyCoords.y + rowExpansion
-  }
-  where
-  rowExpansion = Set.size $ Set.filter (_ < galaxyCoords.y) emptyRows
+  expandGalaxy coords =
+    { x: coords.x + numExpandedColumns * (expansion - 1)
+    , y: coords.y + numExpandedRows * (expansion - 1)
+    }
+    where
+    numExpandedRows = Set.size $ Set.filter (_ < coords.y) emptyRows
 
-  columnExpansion = Set.size $ Set.filter (_ < galaxyCoords.x) emptyColumns
+    numExpandedColumns = Set.size $ Set.filter (_ < coords.x) emptyColumns
 
 parseGalaxies :: String -> Galaxies
 parseGalaxies input = Set.fromFoldable $ map fst $ parseGrid input (string "#")
